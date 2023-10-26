@@ -19,7 +19,7 @@ jobs:
           root_file: main.tex
 
       - name: Rename document
-        run: mkdir dist && mv main.pdf dist/buku-ta.pdf
+        run: mkdir dist && mv main.pdf dist/modul.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0
