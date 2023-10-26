@@ -15,9 +15,34 @@ jobs:
           sudo apt-get install -y texlive-full
           pdflatex main.tex
           pdflatex main.tex  # Run twice for references
+      
+       - name: Rename document
+        run: mkdir dist && mv main.pdf dist/modul.pdf
 
       - name: Upload the PDF
         uses: actions/upload-artifact@v2
         with:
-          name: document
-          path: main.pdf
+          path: dist
+  deploy:
+    name: Deploy
+    if: github.event_name != 'pull_request'
+    needs: compile
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v3.0.6
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v2.0.4
+
