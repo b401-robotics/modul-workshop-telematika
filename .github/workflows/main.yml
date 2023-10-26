@@ -1,0 +1,23 @@
+name: Build LaTeX document
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Compile LaTeX document
+      run: |
+        sudo apt-get install -y texlive-full
+        pdflatex your_document_name.tex
+        pdflatex your_document_name.tex  # Run twice for references
+
+    - name: Upload the PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: document
+        path: main.pdf
