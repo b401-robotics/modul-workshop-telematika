@@ -7,17 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Compile LaTeX document
-      run: |
-        sudo apt-get install -y texlive-full
-        pdflatex your_document_name.tex
-        pdflatex your_document_name.tex  # Run twice for references
+      - name: Compile LaTeX document
+        run: |
+          sudo apt-get install -y texlive-full
+          pdflatex main.tex
+          pdflatex main.tex  # Run twice for references
 
-    - name: Upload the PDF
-      uses: actions/upload-artifact@v2
-      with:
-        name: document
-        path: main.pdf
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: document
+          path: main.pdf
