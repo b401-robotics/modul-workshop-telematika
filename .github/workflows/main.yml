@@ -1,32 +1,35 @@
 name: Build LaTeX document
 
-on: [push]
-
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
 jobs:
-  build:
+  compile:
+    name: Compile
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
 
-      - name: Compile LaTeX document
-        run: |
-          sudo apt-get install -y texlive-full
-          pdflatex main.tex
-          pdflatex main.tex  # Run twice for references
+      - name: Compile document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
 
       - name: Rename document
-        run: mkdir dist && mv main.pdf dist/modul.pdf
+        run: mkdir dist && mv main.pdf dist/buku-ta.pdf
 
-      - name: Upload the PDF
-        uses: actions/upload-artifact@v2
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2.0.0
         with:
           path: dist
+
   deploy:
     name: Deploy
     if: github.event_name != 'pull_request'
-    needs: build
+    needs: compile
     runs-on: ubuntu-latest
     permissions:
       contents: read
