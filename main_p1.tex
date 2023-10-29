@@ -1,0 +1,92 @@
+\documentclass[12pt,twoside]{report}
+% Pengaturan ukuran halaman dan margin
+\usepackage[a4paper,top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
+
+% Pengaturan ukuran spasi
+\usepackage[singlespacing]{setspace}
+
+% Pengaturan jenis karakter
+\usepackage[utf8]{inputenc}
+
+% Pengaturan pewarnaan
+\usepackage[table,xcdraw]{xcolor}
+
+% Pengaturan kutipan artikel
+\usepackage[style=apa, backend=biber]{biblatex}
+
+% Package lainnya
+\usepackage{graphicx,tabularx,multirow}
+\usepackage[bahasa]{babel}
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{eso-pic}
+\usepackage{txfonts} % Font times
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+
+% Pengaturan jenis karakter
+\usepackage[utf8]{inputenc}
+
+% Pengaturan format daftar isi, daftar gambar, dan daftar tabel
+\usepackage[titles]{tocloft}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftbeforechapskip}{1.5ex}
+\setlength{\cftbeforesecskip}{1.5ex}
+\setlength{\cftbeforetoctitleskip}{0cm}
+\setlength{\cftbeforeloftitleskip}{0cm}
+\setlength{\cftbeforelottitleskip}{0cm}
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries} % command untuk membuat heading bold dan besar
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+% Pengaturan format judul bab
+\usepackage{titlesec}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\titleformat{\chapter}[display]{\centering\bfseries\large}{Modul\ \arabic{chapter}\ }{0ex}{\vspace{0ex}\centering}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titlespacing{\chapter}{0ex}{0ex}{4ex}
+\titlespacing{\section}{0ex}{1ex}{0ex}
+\titlespacing{\subsection}{0ex}{0.5ex}{0ex}
+\titlespacing{\subsubsection}{0ex}{0.5ex}{0ex}
+\setcounter{secnumdepth}{3} % Untuk memberi penomoran pada \subsubsection
+
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+
+\definecolor{visigrey}{rgb}{.1,.15,.15}
+\geometry{top=1cm,bottom=.5cm}
+\savegeometry{titlepage}
+\geometry{top=2cm,bottom=2cm}
+\savegeometry{main}
+
+\def\bspace{\(\qquad\qquad\qquad\)}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+
+\setcounter{tocdepth}{6}
+
+
+
+
+\begin{document}
+	% Ubah Bahasa sesuai dengan keinginan
+    \selectlanguage{bahasa}
+  
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+	\input{P1/DesainPCB.tex}
+
+\end{document}
