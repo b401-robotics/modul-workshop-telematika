@@ -13,6 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
 
+      - name: Install pandoc
+        run: sudo apt-get install -y pandoc
+
       - name: Compile document 1
         uses: xu-cheng/latex-action@v3
         with:
@@ -48,8 +51,8 @@ jobs:
       - name: Move document 5 to dist
         run: mv main_p4.pdf dist/P4.pdf
 
-      - name: Copy README.md to dist
-        run: cp README.md dist/
+      - name: Convert README.md to index.html
+        run: pandoc README.md -o dist/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0
