@@ -13,13 +13,40 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
 
-      - name: Compile document
+      - name: Compile document 1
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+      - name: Move document 1 to dist
+        run: mv main.pdf dist/main.pdf
 
-      - name: Rename document
-        run: mkdir dist && mv main.pdf dist/modul.pdf
+      - name: Compile document 2
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main_p1.tex
+      - name: Move document 2 to dist
+        run: mv main_p1.pdf dist/P1.pdf
+
+      - name: Compile document 3
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main_p2.tex
+      - name: Move document 3 to dist
+        run: mv main_p2.pdf dist/P2.pdf
+
+      - name: Compile document 4
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main_p3.tex
+      - name: Move document 4 to dist
+        run: mv main_p3.pdf dist/P3.pdf
+
+      - name: Compile document 5
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main_p4.tex
+      - name: Move document 5 to dist
+        run: mv main_p4.pdf dist/P4.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0
