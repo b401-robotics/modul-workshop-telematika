@@ -1,25 +1,33 @@
-\documentclass[a4paper,12pt]{book}
-\usepackage{enumitem}
-\usepackage{listings}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[bahasa]{babel}
-\usepackage{float}
-\usepackage{verbatim}
-\usepackage{graphicx,tabularx,multirow}
-\usepackage{xcolor}
-\usepackage[onehalfspacing]{setspace}
-\usepackage[
-	allcolors=visigrey,
-	colorlinks=true,
-]{hyperref}
-\usepackage[a4paper,left=2cm,right=2cm]{geometry}
+\documentclass[12pt,twoside]{report}
+% Pengaturan ukuran halaman dan margin
+\usepackage[a4paper,top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
+
+% Pengaturan ukuran spasi
+\usepackage[singlespacing]{setspace}
+
+% Pengaturan jenis karakter
+\usepackage[utf8]{inputenc}
+
+% Pengaturan pewarnaan
+\usepackage[table,xcdraw]{xcolor}
+
+% Pengaturan kutipan artikel
+\usepackage[style=apa, backend=biber]{biblatex}
 
 % Package lainnya
+\usepackage{graphicx,tabularx,multirow}
+\usepackage[bahasa]{babel}
 \usepackage{changepage}
-\usepackage{etoolbox} % Mengubah fungsi default
-\usepackage{}
+\usepackage{enumitem}
+\usepackage{eso-pic}
+\usepackage{txfonts} % Font times
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{float}
 
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
