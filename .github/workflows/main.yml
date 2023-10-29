@@ -18,7 +18,7 @@ jobs:
         with:
           root_file: main.tex
       - name: Move document 1 to dist
-        run: mv main.pdf dist/main.pdf
+        run: mkdir dist && mv main.pdf dist/modul.pdf
 
       - name: Compile document 2
         uses: xu-cheng/latex-action@v3
