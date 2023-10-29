@@ -6,7 +6,11 @@
 
 Modul Praktikum Workshop Telematika ini dirancang untuk membantu mahasiswa memahami dasar-dasar telematika, desain 3D, PCB, dan schematic.
 
-> file PDF dari modul ini bisa dilihat di [sini](https://zer0-911.github.io/modul-workshop-telematika/modul.pdf).
+> file PDF Buku dari modul ini bisa dilihat di [sini](https://zer0-911.github.io/modul-workshop-telematika/modul.pdf).
+> Modul P1 di [sini](https://zer0-911.github.io/modul-workshop-telematika/P1.pdf).
+> Modul P2 di [sini](https://zer0-911.github.io/modul-workshop-telematika/P2.pdf).
+> Modul P3 di [sini](https://zer0-911.github.io/modul-workshop-telematika/P3.pdf).
+> Modul P4 di [sini](https://zer0-911.github.io/modul-workshop-telematika/P4.pdf).
 
 ## Isi Modul
 
