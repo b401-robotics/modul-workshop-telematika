@@ -48,6 +48,9 @@ jobs:
       - name: Move document 5 to dist
         run: mv main_p4.pdf dist/P4.pdf
 
+      - name: Copy README.md to dist
+        run: cp README.md dist/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0
         with:
