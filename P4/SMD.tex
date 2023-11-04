@@ -1,5 +1,91 @@
-\chapter{Penyolderan Komponen SMD Pada Board}
+\chapter{Penyolderan Komponen SMD Minsys ESP32 Pada Board}
 
 \section{Tujuan}
+\begin{enumerate}
+    \item Mempraktikkan teknik penyolderan SMD untuk membangun Minimum System pada mikrokontroler ESP32.
+    \item Memahami karakteristik dan kebutuhan khusus dalam penyolderan komponen SMD.
+    \item Mendapatkan keahlian dalam menangani alat solder untuk komponen elektronik ukuran kecil.
+    \item Mengembangkan kemampuan untuk membaca skematik dan menerapkannya pada pembuatan prototipe elektronik.
+\end{enumerate}
 
-\section{Pendahuluan}
+\section{Dasar Teori}
+Minimum System ESP32 merupakan papan pengembangan yang dirancang untuk memudahkan penggunaan mikrokontroler ESP32. ESP32 sendiri adalah mikrokontroler dengan kemampuan Wi-Fi dan Bluetooth terintegrasi yang sering digunakan untuk proyek IoT (Internet of Things). Dalam penyolderan SMD, komponen elektronik dipasang langsung ke permukaan PCB tanpa menggunakan kaki atau pin melalui lubang. 
+
+Penyolderan SMD memerlukan presisi dan kecermatan karena ukuran komponen yang sangat kecil dan pad yang berdekatan satu sama lain. Penggunaan stencil dalam proses penyolderan SMD memungkinkan aplikasi pasta solder yang seragam dan akurat, yang sangat penting untuk mencegah short-circuit pada pad-pad yang berdekatan.
+
+Proses penyolderan SMD untuk ESP32 melibatkan langkah-langkah seperti penyiapan stencil, aplikasi pasta solder, penempatan komponen dengan pinset atau vacuum pickup tool, dan penyolderan menggunakan solder ujung halus atau hot air rework station. Pemeriksaan visual dan pengujian fungsional dilakukan setelah penyolderan untuk memastikan kualitas sambungan dan fungsi rangkaian secara keseluruhan.
+
+\section{Tugas Pendahuluan}
+\begin{enumerate}
+    \item Mengapa penggunaan stencil penting dalam proses penyolderan SMD? Jelaskan bagaimana stencil digunakan dalam proses aplikasi pasta solder.
+    \item Apa yang dimaksud dengan 'rework' dalam konteks penyolderan SMD dan kapan proses ini diperlukan?
+    \item Berikan contoh bagaimana kesalahan dalam penyolderan SMD dapat mempengaruhi kinerja rangkaian elektronik.
+\end{enumerate}
+
+\section{Alat dan Komponen}
+\subsection{Alat}
+\begin{enumerate}
+    \item Soldering kit
+    \item Timah 0.8 mm
+    \item Timah 0.4 mm
+    \item Power source
+    \item Sikat 
+    \item IPA (Isopropyl alcohol)
+    \item Flux
+\end{enumerate}
+
+\subsection{Komponen}
+\begin{enumerate}
+    \item Minimum System ESP32
+    \item Stencil
+    \item Kapasitor 10 uF
+    \item Resistor 10 k$\Omega$
+    \item Resistor 1 k$\Omega$
+    \item LED
+    \item Push button
+    \item Header pin
+\end{enumerate}
+
+\section{Eksperimen 1: Stencil dan Aplikasi Pasta Solder}
+\begin{enumerate}
+    \item Siapkan stencil dan pasta solder.
+    \item Letakkan stencil di atas PCB dan pastikan posisi stencil tepat di atas pad yang akan disolder.
+    \item Aplikasikan pasta solder pada stencil menggunakan spatula.
+    \item Bersihkan sisa pasta solder pada stencil dan PCB menggunakan sikat dan IPA.
+    \item Periksa hasil aplikasi pasta solder pada PCB.
+    \item Jika hasil aplikasi pasta solder tidak sesuai, ulangi langkah 2-4.
+    \item Jika hasil aplikasi pasta solder sudah sesuai, lanjutkan ke eksperimen berikutnya.
+\end{enumerate}
+
+\section{Eksperimen 2: Penempatan Komponen dan Penyolderan}
+\begin{enumerate}
+    \item Siapkan komponen yang akan disolder.
+    \item Letakkan komponen pada PCB sesuai dengan posisi yang diinginkan.
+    \item Periksa posisi komponen dan pastikan komponen tidak bergerak.
+    \item Jika posisi komponen sudah sesuai, lanjutkan ke eksperimen berikutnya.
+    \item Jika posisi komponen belum sesuai, ulangi langkah 2-3.
+    \item Solder komponen menggunakan solder ujung halus atau hot air rework station.
+    \item Periksa hasil penyolderan.
+    \item Jika hasil penyolderan sudah sesuai, lanjutkan ke eksperimen berikutnya.
+    \item Jika hasil penyolderan belum sesuai, ulangi langkah 6-7.
+    \item Ulangi langkah 1-9 untuk komponen lainnya.
+    \item Jika semua komponen sudah disolder, lanjutkan ke eksperimen berikutnya.
+    \item Jika ada komponen yang belum disolder, ulangi langkah 1-10.
+    \item Periksa hasil penyolderan pada semua komponen.
+\end{enumerate}
+
+\section{Eksperimen 3: Upload Program dan Pengujian Fungsional}
+\begin{enumerate}
+    \item Siapkan kabel USB dan komputer.
+    \item Hubungkan kabel USB ke komputer dan Minimum System ESP32.
+    \item Upload program ke Minimum System ESP32.
+    \item Periksa hasil upload program.
+    \item Jika hasil upload program sudah sesuai, lanjutkan ke langkah selanjutnya.
+    \item Jika hasil upload program belum sesuai, ulangi langkah 3-4.
+    \item Uji fungsional Minimum System ESP32.
+    \item Uji dengan cara menekan tombol reset dan periksa apakah LED menyala.
+    \item Uji dengan cara menekan tombol push button dan periksa apakah LED menyala.
+    \item Uji dengan cara menghubungkan kabel USB ke komputer dan periksa apakah LED menyala.
+    \item Jika semua fungsi sudah berjalan dengan baik, dokumentasikan hasil kerja dan bersihkan meja kerja. 
+\end{enumerate}
+

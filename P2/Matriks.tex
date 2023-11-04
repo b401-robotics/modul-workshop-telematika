@@ -42,6 +42,7 @@ Kedua teknik ini memerlukan alat khusus, presisi, dan keahlian untuk memastikan 
 \begin{enumerate}
     \item Soldering kit
     \item Timah 0.8 mm
+    \item Timah 0.4 mm
     \item Power source
     \item Sikat 
     \item IPA (Isopropyl alcohol)
@@ -53,7 +54,20 @@ Kedua teknik ini memerlukan alat khusus, presisi, dan keahlian untuk memastikan 
 \begin{enumerate}
     \item Resistor 330-ohm 			        (1x)
     \item White Housing 2 Pin			    (1x)
-    \item 7-Segment 0.56-inch Common Katoda	(2x)    
+    \item 7-Segment 0.56-inch Common Katoda	(2x)
+    \item Komponen Modul LED Chaser		    (1x)
+    \begin{enumerate}
+        \item PCB Modul         (1x)
+        \item PCB Modul         (1x)
+        \item Resistor 1K Ohm   (10x)
+        \item Resistor 2K Ohm   (1x)
+        \item Resistor 10K Ohm  (1x)
+        \item Capacitor 1uF     (2x)
+        \item Resistor Variable (1x)
+        \item Header Male 2 Pin (1x)
+        \item NE555 IC          (1x)
+        \item CD4017 IC         (1x)
+    \end{enumerate}    
 \end{enumerate}
 \section{Eksperimen 1: Teknik Desoldering}
 \begin{enumerate}
@@ -127,4 +141,43 @@ Kedua teknik ini memerlukan alat khusus, presisi, dan keahlian untuk memastikan 
         \end{figure}
 \end{enumerate}
 
+\section{Eksperimen 3: Teknik Soldering Uap}
+\subsection{Percobaan 1: Penyolderan SMD}
+\begin{enumerate}
+    \item Siapkan semua peralatan yang disebutkan dan panaskan solder
+    \item Pelajari panduan "Cara Menyolder SMD"
+    \item Siapkan PCB yang akan disolder
+    \item Siapkan komponen SMD yang akan disolder
+    \item Hubungkan rangkaian dan komponen menggunakan timah yang dipanaskan dengan solder
+    sesuai skematik berikut (PERINGATAN: berhati-hatilah saat meng-handle komponen SMD
+    karena ukurannya yang sangat kecil sehingga mudah hilang)
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{P2/img/smd.png}
+        \caption{Skematik SMD}
+        \label{fig:SkematikSMD}
+    \end{figure}
+    \item Amati output yang dihasilkan, dokumentasikan hasil output dalam bentuk lampiran
+\end{enumerate}
 
+
+\begin{center}
+	\colorbox{pink}{\parbox{0.8\linewidth}{\textbf{Tips:} Ketika menyolder SMD, disarankan dimulai dari yang paling rumit terdahulu (IC),
+    setelah itu resistor/kapasitor. Penyolderan komponen through-hole dapat dilakukan
+    setelah komponen SMD tersolder semua.}}
+\end{center}
+
+\subsection{Percobaan 2: Mengatur Kecepatan LED Chaser}
+\begin{enumerate}
+    \item Beri daya pada modul LED Chaser
+    \item Putar VAR-RES searah jarum jam, amati apa yang terjadi
+    \item Putar VAR-RES berlawanan jarum jam, amati apa yang terjadi
+    \item Amati output yang dihasilkan, dokumentasikan hasil output dalam bentuk lampiran
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{P2/img/HasilSMD.png}
+    \caption{Hasil SMD}
+    \label{fig:HasilSMD}
+\end{figure}
