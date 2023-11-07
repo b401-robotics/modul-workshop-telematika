@@ -1,19 +1,20 @@
-\chapter{Penyolderan Komponen SMD Minsys ESP32 Pada Board}
+\chapter{ESP8266 Minimum System}
 
 \section{Tujuan}
 \begin{enumerate}
-    \item Mempraktikkan teknik penyolderan SMD untuk membangun Minimum System pada mikrokontroler ESP32.
+    \item Mempraktikkan teknik penyolderan SMD untuk membangun Minimum System pada mikrokontroler ESP8266.
     \item Memahami karakteristik dan kebutuhan khusus dalam penyolderan komponen SMD.
     \item Mendapatkan keahlian dalam menangani alat solder untuk komponen elektronik ukuran kecil.
     \item Mengembangkan kemampuan untuk membaca skematik dan menerapkannya pada pembuatan prototipe elektronik.
+    \item Memahami mekanisme cara menanamkan program ke ESP8266.
 \end{enumerate}
 
 \section{Dasar Teori}
-Minimum System ESP32 merupakan papan pengembangan yang dirancang untuk memudahkan penggunaan mikrokontroler ESP32. ESP32 sendiri adalah mikrokontroler dengan kemampuan Wi-Fi dan Bluetooth terintegrasi yang sering digunakan untuk proyek IoT (Internet of Things). Dalam penyolderan SMD, komponen elektronik dipasang langsung ke permukaan PCB tanpa menggunakan kaki atau pin melalui lubang. 
+Minimum System ESP8266 merupakan papan pengembangan yang dirancang untuk memudahkan penggunaan mikrokontroler ESP8266. ESP8266 sendiri adalah mikrokontroler dengan kemampuan Wi-Fi dan Bluetooth terintegrasi yang sering digunakan untuk proyek IoT (Internet of Things). Dalam penyolderan ESP8266, komponen elektronik dipasang langsung ke permukaan PCB tanpa menggunakan kaki atau pin melalui lubang. 
 
 Penyolderan SMD memerlukan presisi dan kecermatan karena ukuran komponen yang sangat kecil dan pad yang berdekatan satu sama lain. Penggunaan stencil dalam proses penyolderan SMD memungkinkan aplikasi pasta solder yang seragam dan akurat, yang sangat penting untuk mencegah short-circuit pada pad-pad yang berdekatan.
 
-Proses penyolderan SMD untuk ESP32 melibatkan langkah-langkah seperti penyiapan stencil, aplikasi pasta solder, penempatan komponen dengan pinset atau vacuum pickup tool, dan penyolderan menggunakan solder ujung halus atau hot air rework station. Pemeriksaan visual dan pengujian fungsional dilakukan setelah penyolderan untuk memastikan kualitas sambungan dan fungsi rangkaian secara keseluruhan.
+Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapan stencil, aplikasi pasta solder, penempatan komponen dengan pinset atau vacuum pickup tool, dan penyolderan menggunakan solder ujung halus atau hot air rework station. Pemeriksaan visual dan pengujian fungsional dilakukan setelah penyolderan untuk memastikan kualitas sambungan dan fungsi rangkaian secara keseluruhan.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
@@ -27,65 +28,75 @@ Proses penyolderan SMD untuk ESP32 melibatkan langkah-langkah seperti penyiapan 
 \begin{enumerate}
     \item Soldering kit
     \item Timah 0.8 mm
-    \item Timah 0.4 mm
     \item Power source
     \item Sikat 
     \item IPA (Isopropyl alcohol)
     \item Flux
+    \item Solder Pasta
+    \item Stencil Holder
+    \item Stencil
+    \item Multimeter
+    \item USB to TTL
 \end{enumerate}
 
 \subsection{Komponen}
 \begin{enumerate}
-    \item Minimum System ESP32
-    \item Stencil
-    \item Kapasitor 10 uF
-    \item Resistor 10 k$\Omega$
-    \item Resistor 1 k$\Omega$
-    \item LED
-    \item Push button
-    \item Header pin
+    \item Minimum System ESP8266 Kit
 \end{enumerate}
 
 \section{Eksperimen 1: Stencil dan Aplikasi Pasta Solder}
 \begin{enumerate}
     \item Siapkan stencil dan pasta solder.
-    \item Letakkan stencil di atas PCB dan pastikan posisi stencil tepat di atas pad yang akan disolder.
-    \item Aplikasikan pasta solder pada stencil menggunakan spatula.
-    \item Bersihkan sisa pasta solder pada stencil dan PCB menggunakan sikat dan IPA.
+    \item Posisikan pcb di atas stencil holder.
+    \item Letakkan stencil di atas PCB dan pastikan posisi stencil tepat di atas pad.
+    \item Tuangkan solder pasta ke stencil.
+    \item Ratakan dengan menggunakan spatula.
+    \item Bersihkan sisa pasta solder pada stencil.
     \item Periksa hasil aplikasi pasta solder pada PCB.
-    \item Jika hasil aplikasi pasta solder tidak sesuai, ulangi langkah 2-4.
-    \item Jika hasil aplikasi pasta solder sudah sesuai, lanjutkan ke eksperimen berikutnya.
+    \item Angkat stencil dari stencil holder.
+    \item Lepaskan PCB dari stencil holder dan pastikan solder pasta sudah sesuai dengaan pad PCB.
 \end{enumerate}
 
 \section{Eksperimen 2: Penempatan Komponen dan Penyolderan}
 \begin{enumerate}
     \item Siapkan komponen yang akan disolder.
-    \item Letakkan komponen pada PCB sesuai dengan posisi yang diinginkan.
-    \item Periksa posisi komponen dan pastikan komponen tidak bergerak.
-    \item Jika posisi komponen sudah sesuai, lanjutkan ke eksperimen berikutnya.
-    \item Jika posisi komponen belum sesuai, ulangi langkah 2-3.
-    \item Solder komponen menggunakan solder ujung halus atau hot air rework station.
-    \item Periksa hasil penyolderan.
-    \item Jika hasil penyolderan sudah sesuai, lanjutkan ke eksperimen berikutnya.
-    \item Jika hasil penyolderan belum sesuai, ulangi langkah 6-7.
-    \item Ulangi langkah 1-9 untuk komponen lainnya.
-    \item Jika semua komponen sudah disolder, lanjutkan ke eksperimen berikutnya.
-    \item Jika ada komponen yang belum disolder, ulangi langkah 1-10.
-    \item Periksa hasil penyolderan pada semua komponen.
+    \item Buka dokumentasi ESP8266 Kit untuk melihat posisi komponen.
+    \item Letakkan komponen SMD pada PCB sesuai dengan posisi mengikuti dokumentasi.
+    \begin{center}
+        \colorbox{pink}{\parbox{0.8\linewidth}{\textbf{Catatan:} Perhatikan posisi positif dan negatif pada komponen polar.}}
+    \end{center}
+    
+    \item Setelah semua komponen diletakkan, periksa kembali posisi komponen.
+    \item Siapkan solder uap (panaskan solder uap hingga 400$^{\circ}$C).
+    \item Solder komponen satu per satu dengan cara dekatkan ujung solder uap ke komponen hingga komponen menempel pada pcb. Pastikan kompone mengering sebelum berpindah ke komponen yang lain.
+    \begin{center}
+        \colorbox{pink}{\parbox{0.8\linewidth}{\textbf{Tips:} Solder komponen ESP8266 terlebih dahulu.}}
+    \end{center}
+    \item Jika sudah selesai pastikan semua komponen sudah terpasang dengan baik.
+    \item Solder pin header/true hole component dengan timah.
 \end{enumerate}
 
-\section{Eksperimen 3: Upload Program dan Pengujian Fungsional}
+\section{Eksperimen 3: Upload Firmware dan Pengujian Fungsional}
 \begin{enumerate}
-    \item Siapkan kabel USB dan komputer.
-    \item Hubungkan kabel USB ke komputer dan Minimum System ESP32.
-    \item Upload program ke Minimum System ESP32.
-    \item Periksa hasil upload program.
-    \item Jika hasil upload program sudah sesuai, lanjutkan ke langkah selanjutnya.
-    \item Jika hasil upload program belum sesuai, ulangi langkah 3-4.
-    \item Uji fungsional Minimum System ESP32.
-    \item Uji dengan cara menekan tombol reset dan periksa apakah LED menyala.
-    \item Uji dengan cara menekan tombol push button dan periksa apakah LED menyala.
-    \item Uji dengan cara menghubungkan kabel USB ke komputer dan periksa apakah LED menyala.
-    \item Jika semua fungsi sudah berjalan dengan baik, dokumentasikan hasil kerja dan bersihkan meja kerja. 
+    \item Siapkan modul USB to TTL.
+    \item Hubungkan modul ke komputer dan Minimum System ESP8266.
+    \item Dowload firmware yang akan digunakan di link berikut: \url{}
+    \item Bukalah firmware yang akan dipakai dengan PlatfomIO.
+    \item Masuk mode bootloader dengan cara menahan tombol boot dan menekan satu kali tombol reset.
+    \item Lepaskan tombol boot.
+    \item Upload firmware menggunakan PlatformIO.
+    \item Tunggu hingga proses upload berhasil.
+    \item Jika LED menyala, lanjut ke eksperimen selanjutnya.
+    \item Jika tidak, ulangi proses upload
+    \item Dokumentasikan hasil.
+\end{enumerate}
+
+\section{Eksperimen 4: Pengujian Program Kelompok}
+\begin{enumerate}
+    \item Siapkan program yang akan diuji.
+    \item Masukkan program yang sudah dibuat pada template yang sudah disediakan.
+    \item Upload program menggunakan PlatformIO.
+    \item Tes sesuai dengan klik tombol dan pastikan sesuai dengan hasil yang seharusnya.
+    \item Dokumenasikan hasilnya.
 \end{enumerate}
 
