@@ -20,8 +20,7 @@ schematic dan PCB yang nantinya akan diprint, selain memiliki fitur yang mumpuni
 tutorial cara penggunaan serta tersedia banyak library komponen yang sering kali dipakai
 pada project arduino, MCU, dan elektronika.
 
-Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan
-mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
+Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
 akan arahkan untuk membuat rangkaian schematic dan board menggunakan MCU esp-12f
 dan beberapa komponen lain yang bisa diprogram menjadi alat IoT sederhana.
 
@@ -36,9 +35,8 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Baca dan Pahami technical guide
-    \item Pelajari semua datasheet dari semua IC yang digunakan pada percobaan ini!
-    \item Buatlah schematic untuk output berupa nomor kelompok!
+    \item Install Fusion 360 pada Laptop masing-masing anggota kelompok
+    \item Buat jalur PCB rangkaian regulator lm7805 dari schematic yang telah disediakan pada folder praktikan
 \end{enumerate}
 
 \section{Alat dan Komponen}
@@ -48,43 +46,129 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
     \item Mouse
 \end{enumerate}
 
-\section*{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
-Buatlah desain MINIMUM SYSTEM ESP8266 yang memiliki button untuk Reset dan
-Flash. ESP8266 ini memerlukan JST 4 PIN yang akan disambungkan dengan USB to TTL untuk
-memprogram chip. ESP8266 ini dapat digunakan dengan menggunakan tegangan 3,3V yang
-nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN.
-
+\section{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
+Pada eksperimen 1, akan dibuat sebuah desain schematic Minimum System untuk menjalankan 
+chip ESP8266 sehingga dapat dihubungkan dengan komputer dan dilakukan flash program ke ROM nya. 
+Minimum System ESP8266 ini akan disuply dayanya dengan tegangan sebesar 3,3 Volt yang diatur 
+oleh 3,3-Voltage Regulator nya. Untuk dapat menyambungkan ESP8266 dengan host computer yang 
+dapat melakukan flash programnya maka digunakan connector JST 4 PIN TTL to USB, 
+sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP8266 juga memiliki 
+2 switch yang digunakan untuk melakukan Reset dan Flash.
 \begin{enumerate}
-    \item Untuk memulai membuat Design klik “file” di kiri atas dan klik “New Electronics Design”
-    lalu save (ctrl+s) dan beri nama “Minimum System ESP8266”.
+    \item Untuk memulai membuat project klik \textbf{New Project} di kiri atas dan beri nama sesuai yang kalian inginkan
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.6\linewidth]{P1/img/newelect.png}
-            \caption{buat desain baru} 
-            \label{fig:buat desain baru}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar1.jpeg}
+            \caption{buat project baru} 
+            \label{fig:buat project baru}
         \end{figure}
-    \item Selanjutnya untuk memulai mendesain schematic klik pada “New Schematic” lalu
-    save (ctrl+s) dan beri nama “Schematic Minimum System ESP8266”.
+    \item Selanjut nya buka project space yang telah kalian buat pada window di bagian kiri
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.16\linewidth]{P1/img/newschematic.png}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar2.jpeg}
+            \caption{buka project} 
+            \label{fig:buka project}
         \end{figure}
-    \item Sebelum memulai mendesain pastikan library yang dibutuhkan sudah diunduh. Untuk
-    mengupload library Workshop Telematika Buka tab “LIBARY” dan buka “Libary Manager”.
-    Klik Pada “Import Library" dan pilih “Import From local Disk” lalu upload file library
-    Workshop Telematika dengan file type .lbr
+    \item Sebelum memulai mengerjakan pada project, kita harus mengimport library yang berisi semua komponen yang diperlukan. Klik \textbf{File > Open}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.7\linewidth]{P1/img/importLibrary.png}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar3.jpeg}
+            \caption{Membuka prompt File Select} 
+            \label{fig:Membuka prompt File Select}
         \end{figure}
-    komponen yang dibutuhkan adalah :
+    Selanjutnya pilih \textbf{Open from my computer}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{P1/img/gambar4.jpeg}
+        \caption{Mengakses file di Komputer} 
+        \label{fig:Mengakses file di Komputer}
+    \end{figure}
+    Cari dimana file library untuk modul ini tersimpan pada folder file anda, file tersebut memiliki extensi file .lbr
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{P1/img/gambar5.jpeg}
+        \caption{Memilih Library} 
+        \label{fig:Memilih Library}
+    \end{figure}
+    Setelah library terimport, klik \textbf{ctrl + S} untuk melakukan saving library pada project yang anda miliki dan klik save.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{P1/img/gambar6.jpeg}
+        \caption{Simpan Library} 
+        \label{fig:Simpan Library}
+    \end{figure}
+    Maka tampilan Fusion anda akan menjadi seperti \textbf{Gambar 1.7}, dimana telah terdapat list komponen yang anda perlukan.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar7.jpeg}
+            \caption{Tampilan Fusion} 
+            \label{fig:TampilanFusion1}
+        \end{figure}
+    \item Berikutnya untuk memulai mendesign rangkaian, klik \textbf{File > New Electonic Design}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar8.jpeg}
+            \caption{Memulai desain rangkaian} 
+            \label{fig:Memulai desain rangkaian}
+        \end{figure}
+    Lakukan penyimpanan dengan menekan \textbf{ctrl + S} lalu beri nama sesuai keinginan kalian.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar9.jpeg}
+            \caption{Menyimpan workspace} 
+            \label{fig:Menyimpan workspace}
+        \end{figure}
+    Tampilan Fusion anda akan menjadi seperti \textbf{gambar 1.10}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar10.jpeg}
+            \caption{Tampilan Fusion} 
+            \label{fig:Tampilan Fusion}
+        \end{figure}
+    \item Untuk membuat lembar schematic dan mulai mendesain, klik tombol \textbf{New Schematic} 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar11.jpeg}
+            \caption{New Schmatic} 
+            \label{fig:New Schematic}
+        \end{figure}
+    berikutnya tekan \textbf{ctrl + S} lalu beri nama dan simpan schematic.
+    \item Untuk meletakan komponen, dapat menggunakan tool \textbf{Place Component} yang terletak pada bagian dari Fusion.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar13.jpeg}
+            \caption{Place Component} 
+            \label{fig:Place Component}
+        \end{figure}
+    \item Tekan icon \textbf{Open Library Manager} sesuai dengan \textbf{gambar 1.14}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar14.jpeg}
+            \caption{Membuka Library Manager} 
+            \label{fig:Membuka LIbrary Manager}
+        \end{figure}
+    Berikutnya aktifkan library yang sebelumnya telah anda tambahkan dan pastikan statusnya \textbf{In Use}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar15.jpeg}
+            
+            \label{fig:Status Library}
+        \end{figure}
+    \item Berikut adalah komponen-komponen yang anda butuhkan :
+    \vspace{5pt}
+    \begin{table}[ht]
+        
+   
     \begin{center}
-        \begin{tabular}[H]
-            {|c|c|c|c|c|}
+    
+        \caption{Komponen}
+        \label{tab:komponen}
+
+        \begin{tabular}{|c|p{2cm}|m{2cm}|m{2cm}|m{2cm}|}
             \hline
             Gambar & Nama & Library & Jumlah & Catatan \\
             \hline
-            \includegraphics[width=0.3\linewidth]{P1/img/ESP8266.png} & ESP8266-
+            \includegraphics[width=0.2\linewidth]{P1/img/ESP8266.png} & ESP8266-
     12E/ESP-12E & Row 2, Col 3 & Row 2, Col 4 & Row 2, Col 5 \\
             \hline
             Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 & Row 3, Col 4 & Row 3, Col 5 \\
@@ -100,55 +184,43 @@ nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN
             Row 8, Col 1 & Row 8, Col 2 & Row 8, Col 3 & Row 8, Col 4 & Row 8, Col 5 \\
             \hline
             \end{tabular}
+        \vspace{-\topsep} % Mengurangi spasi sebelum tabel
     \end{center}
-    
-
-    \item Komponen dapat ditemukan dengan menggunakan tools \textbf{"Place Component"}
+\end{table}
+    \vspace{5pt}
+    \\
+    \\
+    \item Sambungkan seluruh komponen dengan koneksi pin sebagai berikut :
+        \begin{enumerate}
+            \item 3.3-VOLTAGE-REGULATOR GND <-> SUPPLY-CONNECTOR GND / GND
+            \item 3.3-VOLTAGE-REGULATOR VI <-> SUPPLY-CONNECTOR VCC
+            \item 3.3-VOLTAGE-REGULATOR VI <-> Capacitor (2) <-> SUPPLY-CONNECTOR GND / GND
+            \item 3.3-VOLTAGE-REGULATOR VO <-> Capacitor (1) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 GND <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 VCC <-> 3.3-VOLTAGE-REGULATOR VO
+            \item ESP8266 GPIO15 <-> Resistor (1) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 EN <-> Resistor (3) <-> 3.3-VOLTAGE-REGULATOR VO
+            \item ESP8266 RST <-> Resistor (2) <-> 3.3-VOLTAGE-REGULATOR VO
+            \item ESP8266 RST <-> Switch (2) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 GPIO0 <-> Resistor (4) <-> 3.3-VOLTAGE-REGULATOR VO
+            \item ESP8266 GPIO0 <-> Switch (1) <-> Resistor (5) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 RXD <-> TTL-CONNECTOR RXD
+            \item ESP8266 TXD <-> TTL-CONNECTOR TXD
+            \item TTL-CONNECTOR VCC <-> 3.3-VOLTAGE-REGULATOR VO
+            \item TTL-CONNECTOR GND <->  SUPPLY-CONNECTOR GND / GND
+        \end{enumerate}
+    \item Hasil dari rangkaian dari Minimum System ESP8266 adalah sebagai berikut :
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.7\linewidth]{P1/img/placecomponent.png}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar23.jpeg}
+            \caption{Hasil Rangkaian} 
+            \label{fig:Hasil Rangkaian}
         \end{figure}
-    \item Untuk melakukan wiring atau koneksi pin gunakan Tools \textbf{Net} 
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.2\linewidth]{P1/img/net.png}
-        \end{figure}
-    koneksi yang diperlukan adalah :
-    \begin{enumerate}
-        \item 3,3-VOLTAGE-REGULATOR GND <-> JST 2 PIN GND / GND
-        \item 3,3-VOLTAGE-REGULATOR VIN/IN <-> JST 2 PIN VCC
-        \item 3,3-VOLTAGE-REGULATOR VIN/IN <-> Capacitor (1) <-> JST 2 PIN GND / GND
-        \item 3,3-VOLTAGE-REGULATOR VOUT/OUT <-> Capacitor (2) <-> JST 2 PIN GND / GND
-        \item 3,3-VOLTAGE-REGULATOR VEN/EN <-> JST 2 PIN VCC
-        \item ESP8266 GND <-> JST 2 PIN GND / GND
-        \item ESP8266 VCC <-> 3,3-VOLTAGE-REGULATOR VOUT/OUT
-        \item ESP8266 GPIO15 <-> Resistor (1) <-> JST 2 PIN GND / GND
-        \item ESP8266 EN/CH-PD <-> Resistor (2) <-> 3,3-VOLTAGE-REGULATOR VOUT/OUT
-        \item ESP8266 RST/RESET <-> Resistor (3) <-> 3,3-VOLTAGE-REGULATOR VOUT/OUT
-        \item ESP8266 RST/RESET <-> Switch (1) <-> JST 2 PIN GND / GND
-        \item ESP8266 GPIO0 <-> Resistor (4) <-> 3,3-VOLTAGE-REGULATOR VOUT/OUT
-        \item ESP8266 GPIO0 <-> Switch (2) <-> Resistor (5) <-> JST 2 PIN GND / GND
-        \item ESP8266 RXD <-> JST 4 PIN RXD
-        \item ESP8266 TXD <-> JST 4 PIN TXD
-        \item JST 4 PIN VCC <-> 3,3-VOLTAGE-REGULATOR VOUT/OUT
-        \item JST 4 PIN GND <-> JST 2 PIN GND / GND
-    \end{enumerate}
 \end{enumerate}
-\clearpage
-\textbf{Referensi rangkaian :}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{P1/img/referensi.png}
-\end{figure}
+        
 
-\textbf{Referensi rangkaian} :
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\linewidth]{P1/img/hasiljadischematic.png}
-\end{figure}
-
-\section*{PERCOBAAN 2: ROUTING BOARD MINIMUM SYSTEM ESP8266}
-Setelah proses penyusunan schematic selesai, waktunya mendesain bagaimana board
+\section{Eksperimen 2: PCB design Minimum System ESP8266}
+Setelah proses penyusunan schematic selesai, waktunya mendesain bagaimana Printed Circuit Board
 dari schematic tersebut akan tersusun.
 \begin{enumerate}
     \item Untuk melanjutkan mendesain board dari schematic gunakan tools \textbf{“Switch to PCB
@@ -156,39 +228,49 @@ dari schematic tersebut akan tersusun.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P1/img/switchtopcb.png}
+        \caption{Switch to PCB} 
+        \label{fig:Switch to PCB}
     \end{figure}
     Pada bagian awal saat mengubah ke board, akan disuguhkan tampilan sebagai berikut. Pada
-bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
-menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
-bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
-footprint komponen.
+    bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
+    menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
+    bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
+    footprint komponen.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\linewidth]{P1/img/PCBawal.png}
+        \includegraphics[width=0.6\linewidth]{P1/img/gambar24.jpeg}
+        \caption{PCB awal} 
+        \label{fig:PCBawal}
     \end{figure}
+    \vspace{-\topsep}
     \item Masukan seluruh footprint komponen ke dalam Board dengan memilih seluruh footprint menggunakan tools \textbf{Group} dan digerakan dengan menggukan tools \textbf{Move}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.15\linewidth]{P1/img/group.png}
         \includegraphics[width=0.12\linewidth]{P1/img/move.png}
-        \caption{Group dan move}
+        \caption{Group dan Move}
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.89\linewidth]{P1/img/aftermove.png}
-        \caption{Hasil setelah dipindah}
+        \includegraphics[width=0.6\linewidth]{P1/img/gambar26.jpeg}
+        \caption{Hasil setelah dipindah} 
+        \label{fig:Hasil setelah dipindah}
     \end{figure}
     \item Susun footprint serapi mungkin dengan mengerakan footprint menggunakan tools
     \textbf{Move}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.89\linewidth]{P1/img/aftermove2.png}
-    \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar27.jpeg}
+            \caption{PCB awal} 
+            \label{fig:PCB awal}
+        \end{figure}
     \item Atur ukuran “Board” dengan menggerakan/geser garis tepi dari “Board” hingga ukuran
     sesuai dengan tatanan footprint.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.89\linewidth]{P1/img/aturukuranboard.png}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar28.jpeg}
+            \caption{Setelah board dikecilkan} 
+            \label{fig:Setelah board dikecilkan}
         \end{figure}
     \item Selanjutnya adalah melakukan routing jalur koneksi. Dalam melakukan Routing, Tools
     utama yang digunakan adalah \textbf{Route Manual} dan \textbf{Unroute} untuk
@@ -227,11 +309,13 @@ footprint komponen.
             \includegraphics[width=0.89\linewidth]{P1/img/routing4.png}
             \caption{Contoh rangkaian yang tidak bagus dan bagus}
         \end{figure}
-\clearpage
+
     \item Setelah selesai klik save (ctrl+s).
     \textbf{Contoh rangkaian PCB yang sudah jadi :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.89\linewidth]{P1/img/routing5.png}
+            \includegraphics[width=0.47\linewidth]{P1/img/gambar29.jpeg}
+            \includegraphics[width=0.47\linewidth]{P1/img/gambar30.jpeg}
+            \caption{Hasil sebelum dan sesudah di routing}
         \end{figure}
 \end{enumerate}
