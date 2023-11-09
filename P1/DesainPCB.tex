@@ -20,8 +20,7 @@ schematic dan PCB yang nantinya akan diprint, selain memiliki fitur yang mumpuni
 tutorial cara penggunaan serta tersedia banyak library komponen yang sering kali dipakai
 pada project arduino, MCU, dan elektronika.
 
-Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan
-mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
+Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
 akan arahkan untuk membuat rangkaian schematic dan board menggunakan MCU esp-12f
 dan beberapa komponen lain yang bisa diprogram menjadi alat IoT sederhana.
 
@@ -36,7 +35,7 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Baca dan Pahami technical guide
+    \item Baca dan pahami technical guide
     \item Pelajari semua datasheet dari semua IC yang digunakan pada percobaan ini!
     \item Buatlah schematic untuk output berupa nomor kelompok!
 \end{enumerate}
@@ -48,7 +47,7 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
     \item Mouse
 \end{enumerate}
 
-\section*{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
+\section{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
 Buatlah desain MINIMUM SYSTEM ESP8266 yang memiliki button untuk Reset dan
 Flash. ESP8266 ini memerlukan JST 4 PIN yang akan disambungkan dengan USB to TTL untuk
 memprogram chip. ESP8266 ini dapat digunakan dengan menggunakan tegangan 3,3V yang
@@ -60,14 +59,16 @@ nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.6\linewidth]{P1/img/newelect.png}
-            \caption{buat desain baru} 
-            \label{fig:buat desain baru}
+            \caption{Buat Desain Baru} 
+            \label{fig:buatdesainbaru}
         \end{figure}
     \item Selanjutnya untuk memulai mendesain schematic klik pada “New Schematic” lalu
     save (ctrl+s) dan beri nama “Schematic Minimum System ESP8266”.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.16\linewidth]{P1/img/newschematic.png}
+            \caption{Ikon New Schematic} 
+            \label{fig:ikonnewschematic}
         \end{figure}
     \item Sebelum memulai mendesain pastikan library yang dibutuhkan sudah diunduh. Untuk
     mengupload library Workshop Telematika Buka tab “LIBARY” dan buka “Libary Manager”.
@@ -76,15 +77,18 @@ nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.7\linewidth]{P1/img/importLibrary.png}
+            \caption{Library Fusion 360} 
+            \label{fig:libraryfusion3601}
         \end{figure}
     komponen yang dibutuhkan adalah :
+    \vspace{5pt}
     \begin{center}
-        \begin{tabular}[H]
-            {|c|c|c|c|c|}
+        \vspace{-\topsep} % Mengurangi spasi sebelum tabel
+        \begin{tabular}{|c|p{2cm}|m{2cm}|m{2cm}|m{2cm}|}
             \hline
             Gambar & Nama & Library & Jumlah & Catatan \\
             \hline
-            \includegraphics[width=0.3\linewidth]{P1/img/ESP8266.png} & ESP8266-
+            \includegraphics[width=0.2\linewidth]{P1/img/ESP8266.png} & ESP8266-
     12E/ESP-12E & Row 2, Col 3 & Row 2, Col 4 & Row 2, Col 5 \\
             \hline
             Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 & Row 3, Col 4 & Row 3, Col 5 \\
@@ -100,18 +104,23 @@ nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN
             Row 8, Col 1 & Row 8, Col 2 & Row 8, Col 3 & Row 8, Col 4 & Row 8, Col 5 \\
             \hline
             \end{tabular}
+        \vspace{-\topsep} % Mengurangi spasi sebelum tabel
     \end{center}
     
-
+    \vspace{5pt}
     \item Komponen dapat ditemukan dengan menggunakan tools \textbf{"Place Component"}
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.7\linewidth]{P1/img/placecomponent.png}
+            \caption{Place Component} 
+            \label{fig:libraryfusion360}
         \end{figure}
     \item Untuk melakukan wiring atau koneksi pin gunakan Tools \textbf{Net} 
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.2\linewidth]{P1/img/net.png}
+            \caption{Tools Net} 
+            \label{fig:toolsnet}
         \end{figure}
     koneksi yang diperlukan adalah :
     \begin{enumerate}
@@ -134,20 +143,23 @@ nantinya akan dikontrol oleh voltage regulator yang dihubungkan dengan JST 2 PIN
         \item JST 4 PIN GND <-> JST 2 PIN GND / GND
     \end{enumerate}
 \end{enumerate}
-\clearpage
-\textbf{Referensi rangkaian :}
+\textbf{Referensi rangkaian:}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{P1/img/referensi.png}
+    \caption{Referensi Rangkaian} 
+    \label{fig:referensirangkaian}
 \end{figure}
 
-\textbf{Referensi rangkaian} :
+\textbf{Referensi rangkaian:} 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\linewidth]{P1/img/hasiljadischematic.png}
+    \caption{Hasil Schematics} 
+    \label{fig:hasilschematics}
 \end{figure}
 
-\section*{PERCOBAAN 2: ROUTING BOARD MINIMUM SYSTEM ESP8266}
+\section{Eksperimen 2: Routing Board Minimum System ESP8266}
 Setelah proses penyusunan schematic selesai, waktunya mendesain bagaimana board
 dari schematic tersebut akan tersusun.
 \begin{enumerate}
@@ -156,39 +168,47 @@ dari schematic tersebut akan tersusun.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P1/img/switchtopcb.png}
+        \caption{Tools Switch to PCB} 
+        \label{fig:toolsswitchtopcb}
     \end{figure}
     Pada bagian awal saat mengubah ke board, akan disuguhkan tampilan sebagai berikut. Pada
-bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
-menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
-bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
-footprint komponen.
+    bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
+    menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
+    bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
+    footprint komponen.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\linewidth]{P1/img/PCBawal.png}
+        \caption{Tampilan Awal Board} 
+        \label{fig:tampilanawalboard}
     \end{figure}
+    \vspace{-\topsep}
     \item Masukan seluruh footprint komponen ke dalam Board dengan memilih seluruh footprint menggunakan tools \textbf{Group} dan digerakan dengan menggukan tools \textbf{Move}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.15\linewidth]{P1/img/group.png}
         \includegraphics[width=0.12\linewidth]{P1/img/move.png}
-        \caption{Group dan move}
+        \caption{Group dan Move}
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.89\linewidth]{P1/img/aftermove.png}
-        \caption{Hasil setelah dipindah}
+        \includegraphics[width=0.7\linewidth]{P1/img/aftermove.png}
+        \caption{Hasil Setelah Dipindah}
+        \label{fig:hasilsetelahdipindah}
     \end{figure}
     \item Susun footprint serapi mungkin dengan mengerakan footprint menggunakan tools
     \textbf{Move}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.89\linewidth]{P1/img/aftermove2.png}
-    \end{figure}
+        \includegraphics[width=0.7\linewidth]{P1/img/aftermove2.png}
+        \caption{Hasil Setelah Dirapikan}
+        \label{fig:hasilsetelahdirapikan}
+    \end{figure} 
     \item Atur ukuran “Board” dengan menggerakan/geser garis tepi dari “Board” hingga ukuran
     sesuai dengan tatanan footprint.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.89\linewidth]{P1/img/aturukuranboard.png}
+            \includegraphics[width=0.7\linewidth]{P1/img/aturukuranboard.png}
         \end{figure}
     \item Selanjutnya adalah melakukan routing jalur koneksi. Dalam melakukan Routing, Tools
     utama yang digunakan adalah \textbf{Route Manual} dan \textbf{Unroute} untuk

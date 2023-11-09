@@ -95,7 +95,7 @@
 
 
 \begin{document}
-	% Ubah Bahasa sesuai dengan keinginan
+	  % Ubah Bahasa sesuai dengan keinginan
     \selectlanguage{bahasa}
     
     % Nomor halaman pembuka dimulai dari sini
@@ -103,9 +103,12 @@
 
     % Atur ulang penomoran halaman
     \setcounter{page}{1}
-	
+
     \input{Cover/cover.tex}
     \cleardoublepage
+    
+    % \setlist[itemize]{itemsep=0pt, parsep=0pt} % Untuk itemize
+    \setlist[enumerate]{itemsep=0pt, parsep=0pt} % Untuk enumerate
 
     \begin{spacing}{1.5}
         % Daftar isi
@@ -129,6 +132,7 @@
     % Nomor halaman isi dimulai dari sini
     \pagenumbering{arabic}
     \setcounter{page}{1}
+  \linespread{1.25}
 	\input{P1/DesainPCB.tex}
 	\input{P2/Matriks.tex}
 	\input{P3/Desain3DModel.tex}
