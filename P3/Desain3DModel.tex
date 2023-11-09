@@ -12,7 +12,7 @@
     tertentu
 \end{enumerate}
 
-\section{Pendahuluan}
+\section{Dasar Teori}
 Secara sederhana, Enclosure adalah housing logam atau plastik yang dirancang untuk menutupi dan
 melindungi disk drive, chip, ataupun board didalamnya dari kerusakan serta risiko lain yang bisa
 membahayakan fungsionalitas dan keutuhan komponen didalamnya. Enclosure pada umumnya dapat
@@ -28,12 +28,15 @@ membuat arus pendek pada board. Berikut referensi desain enclosure
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\linewidth]{P3/img/image1.jpg}
-        
+        \caption{Referensi Enclosure}
+        \label{fig:Referensi Enclosure}
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\linewidth]{P3/img/image2.jpg}
+        \caption{Komponen Enclosure}
+        \label{fig:Komponen Enclosure}
     \end{figure}
 
 Kesalahan yang seringkali dijumpai pada proses desain 3D yaitu alur kerja yang terlalu repetitive ataupun
@@ -42,12 +45,12 @@ menggunakan software, fitur yang digunakan kurang membantu pengerjaan desain ata
 memperlamanya. Untuk itu hendaknya mencari referensi, dokumentasi, ataupun inspirasi yang terdapat
 di sekitar seperti lego, laptop, ataupun projektil lain yang dapat ditiru, amati, dan modifikasi desainnya
 
-\section{Kebutuhan}
-\begin{enumerate}
-    \item Berdoa kepada Tuhan Yang Maha Esa
-    \item PC yang terinstall software Autodesk Fusion 360
-    \item File 3D board untuk fitting ke enclosure
-\end{enumerate}
+%\section{Kebutuhan}
+%\begin{enumerate}
+%    \item Berdoa kepada Tuhan Yang Maha Esa
+%    \item PC yang terinstall software Autodesk Fusion 360
+%    \item File 3D board untuk fitting ke enclosure
+%\end{enumerate}
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
@@ -56,7 +59,7 @@ di sekitar seperti lego, laptop, ataupun projektil lain yang dapat ditiru, amati
     \item Baca Panduan Tools Autodesk Fusion 360
 \end{enumerate}
 
-\section{EKSPERIMEN 1: MEMBUAT ENCLOSURE PCB}
+\section*{\normalfont EKSPERIMEN 1: MEMBUAT ENCLOSURE PCB}
 Buatlah enclosure dari PCB yang disediakan. Enlcosure harus terbagi setidaknya menjadi dua bagian yaitu
 \textbf{“Bawah”} sebagai tumpuan PCB dan \textbf{“Atas”} sebagai penutup enclosure. Enclosure juga harus memiliki
 lubang power untuk tempat memberi tegangan PCB.
@@ -67,6 +70,8 @@ lubang power untuk tempat memberi tegangan PCB.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\linewidth]{P3/img/image3.jpg}
+            \caption{Upload}
+            \label{fig:Upload}
         \end{figure}
 
     \item Untuk memulai mendesain Enclosure klik pada \textbf{“file”} dan klik pada \textbf{“New Design”} atau juga saat
@@ -75,6 +80,8 @@ lubang power untuk tempat memberi tegangan PCB.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\linewidth]{P3/img/image4.jpg}
+            \caption{New Design}
+            \label{fig:New Design}
         \end{figure}
 
     \item Langkah selanjutnya adalah memasukan model PCB 3D yang sudah diupload sebelumnya. Untuk
@@ -82,6 +89,8 @@ lubang power untuk tempat memberi tegangan PCB.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\linewidth]{P3/img/image5.jpg}
+            \caption{Insert Into Curret Design}
+            \label{fig:Insert Into Curret Design}
         \end{figure}
 
         \item Saat membuat enclosure terdapat beberapa tools yang tersedia. Berikut beberapa tools yang
@@ -89,6 +98,8 @@ lubang power untuk tempat memberi tegangan PCB.
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.1\linewidth]{P3/img/image6.jpg}
+                \caption{Sketch}
+                \label{fig:Sketch}
             \end{figure}
         \begin{flushleft}
     Sketch: menggambar sketsa 2D dari bentuk yang akan dibuat. Sketsa ini dapat digunakan
@@ -96,22 +107,30 @@ lubang power untuk tempat memberi tegangan PCB.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image7.jpg}
+            \caption{Extrude}
+            \label{fig:Extrude}
         \end{figure}
     Extrude: Mengatur ukuran dari body. Bisa digunakan untuk memperpanjang atau
     memperpendek suatu sisi dari body.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image8.jpg}
+            \caption{Combine}
+            \label{fig:Combine}
         \end{figure}
     Combine: Menggabungkan dua atau lebih body menjadi satu.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image9.jpg}
+            \caption{Measure}
+            \label{fig:Measure}
         \end{figure}
     Measure: Mengukur body Model 3D
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image10.jpg}
+            \caption{Camera}
+            \label{fig:Camera}
         \end{figure}
     Camera: Menggerakan Camera (Dapat juga menggunakan shift+ klik scroll mouse + gerak
     mouse).
@@ -120,6 +139,9 @@ lubang power untuk tempat memberi tegangan PCB.
 
 \section{Aturan Pengerjaan:}
 \begin{enumerate}
+    \item Berdoa kepada Tuhan Yang Maha Esa
+    \item PC yang terinstall software Autodesk Fusion 360
+    \item File 3D board untuk fitting ke enclosure
     \item PBC yang dimasukan digunakan sebagai referensi ukuran enclosure yang akan dibuat. Gunakan
     Tools \textbf{“Measure”} untuk mengukur dimensi dari PCB.
     \item Setelah didapat ukuran PCB Gunakan Tools \textbf{“Sketch”} untuk membuat sketsa 2D yang nanti nya
@@ -135,4 +157,6 @@ lubang power untuk tempat memberi tegangan PCB.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{P3/img/image11.jpg}
+    \caption{Hasil Jadi Enclosure}
+    \label{fig:Hasil Jadi Enclosure}
 \end{figure}
