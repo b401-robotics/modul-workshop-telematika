@@ -20,8 +20,7 @@ schematic dan PCB yang nantinya akan diprint, selain memiliki fitur yang mumpuni
 tutorial cara penggunaan serta tersedia banyak library komponen yang sering kali dipakai
 pada project arduino, MCU, dan elektronika.
 
-Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan
-mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
+Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
 akan arahkan untuk membuat rangkaian schematic dan board menggunakan MCU esp-12f
 dan beberapa komponen lain yang bisa diprogram menjadi alat IoT sederhana.
 
@@ -36,7 +35,7 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Baca dan Pahami technical guide
+    \item Baca dan pahami technical guide
     \item Pelajari semua datasheet dari semua IC yang digunakan pada percobaan ini!
     \item Buatlah schematic untuk output berupa nomor kelompok!
 \end{enumerate}
@@ -48,7 +47,7 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
     \item Mouse
 \end{enumerate}
 
-\section*{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
+\section{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
 Pada eksperimen 1, akan dibuat sebuah desain schematic Minimum System untuk menjalankan 
 chip ESP8266 sehingga dapat dihubungkan dengan komputer dan dilakukan flash program ke ROM nya. 
 Minimum System ESP8266 ini akan disuply dayanya dengan tegangan sebesar 3,3 Volt yang diatur 
@@ -197,22 +196,23 @@ dari schematic tersebut akan tersusun.
         \label{fig:Switch to PCB}
     \end{figure}
     Pada bagian awal saat mengubah ke board, akan disuguhkan tampilan sebagai berikut. Pada
-bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
-menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
-bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
-footprint komponen.
+    bagian kiri terdapat Footprint dari komponen dengan garis warna kuning yang
+    menghubungkan antar footprint komponen sesuai dengan wiring pada schematic. Pada
+    bagian kanan terdapat “Board” yang berbentuk persegi hitam yaitu tempat untuk meletakan
+    footprint komponen.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{P1/img/gambar24.jpeg}
         \caption{PCB awal} 
         \label{fig:PCB awal}
     \end{figure}
+    \vspace{-\topsep}
     \item Masukan seluruh footprint komponen ke dalam Board dengan memilih seluruh footprint menggunakan tools \textbf{Group} dan digerakan dengan menggukan tools \textbf{Move}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.15\linewidth]{P1/img/group.png}
         \includegraphics[width=0.12\linewidth]{P1/img/move.png}
-        \caption{Group dan move}
+        \caption{Group dan Move}
     \end{figure}
     \begin{figure}[H]
         \centering
