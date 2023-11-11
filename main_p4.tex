@@ -79,14 +79,36 @@
 \setcounter{tocdepth}{6}
 \setcounter{chapter}{3}
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
+\fancypagestyle{plain}{
+    \fancyhf{} 
+    \fancyhead[L]{\includegraphics[height=1.5cm]{Cover/img/logodepart.png}} 
+    \fancyhead[R]{Institut Teknologi Sepuluh Nopember \\ Departemen Teknik Komputer \\ Laboratorium Robotika dan Sistem Cerdas} 
+    \renewcommand{\headrulewidth}{1pt} 
+    \fancyfoot[C]{%
+      \includegraphics[width=\textwidth]{Cover/img/footer.png}
+    }
+    \renewcommand{\footrulewidth}{0pt} 
+}
+
+\fancyhf{} 
+\fancyhead[R]{\thepage} 
+\fancyfoot[C]{
+  \includegraphics[width=\textwidth]{Cover/img/footer.png}
+}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt} 
 
 \begin{document}
 	% Ubah Bahasa sesuai dengan keinginan
     \selectlanguage{bahasa}
-  
+    \thispagestyle{fancy}
     \pagenumbering{arabic}
     \setcounter{page}{1}
+    \setlist[itemize]{itemsep=0pt, parsep=0pt} % Untuk itemize
+    \setlist[enumerate]{itemsep=0pt, parsep=0pt} % Untuk enumerate
 	\input{P4/SMD.tex}
 
 \end{document}
