@@ -15,18 +15,18 @@ Sebelum menyusun hardware dan komponen kecil seperti IC di breadboard dan
 bahkan mensoldernya di PCB, ada baiknya kita melakukannya di software terlebih dahulu agar
 kita bisa mengecek kompatibilitas tiap komponen dan mengecekknya secara virtual
 disamping secara rinci mengetahui fungsi setiap komponen yang hendak kita gunakan
-nantinya. Pada praktikum kali ini akan digunakan software AutoCAD EAGLE untuk mendesain
+nantinya. Pada praktikum kali ini akan digunakan software Fusion360 untuk mendesain
 schematic dan PCB yang nantinya akan diprint, selain memiliki fitur yang mumpuni, banyak
 tutorial cara penggunaan serta tersedia banyak library komponen yang sering kali dipakai
 pada project arduino, MCU, dan elektronika.
 
-Praktikan diharapkan sudah membaca secara rinci modul instalasi EAGLE dan mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
-akan arahkan untuk membuat rangkaian schematic dan board menggunakan MCU esp-12f
+Praktikan diharapkan sudah membaca secara rinci modul instalasi Fusion360 dan mencoba fitur-fitur dasarnya dengan membuat schematic sederhana. Pada kali ini praktikan
+akan arahkan untuk membuat rangkaian schematic dan board menggunakan MCU ESP-8266
 dan beberapa komponen lain yang bisa diprogram menjadi alat IoT sederhana.
 
 Kesalahan yang seringkali dijumpai pada proses desain PCB yaitu routing yang
-membingunkan bagi pemula, atau jika sudah melakukan routing namun desainnya susah
-dibaca oleh pengguna lain, maka dari itu untuk memudahkan pembacaan schematic
+membingunkan bagi pemula, atau jika sudah melakukan routing namun desainnya sulit
+dipahami oleh pengguna lain, maka dari itu untuk memudahkan pembacaan schematic
 digunakanlah fitur name dan label, hal ini digunakan untuk menyederhanakan desain tanpa
 mengurangi sedikitpun fungsi utama sirkuit tersebut. Untuk mengecek apakah komponen
 tersebut telah terkoneksi, gunakan fitur SHOW dan arahkan kursor mouse ke arah kabel yang
@@ -35,9 +35,8 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Baca dan pahami technical guide
-    \item Pelajari semua datasheet dari semua IC yang digunakan pada percobaan ini!
-    \item Buatlah schematic untuk output berupa nomor kelompok!
+    \item Install Fusion 360 pada Laptop masing-masing anggota kelompok
+    \item Buat jalur PCB rangkaian regulator lm7805 dari schematic yang telah disediakan pada folder praktikan
 \end{enumerate}
 
 \section{Alat dan Komponen}
@@ -103,7 +102,7 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \centering
             \includegraphics[width=0.6\linewidth]{P1/img/gambar7.jpeg}
             \caption{Tampilan Fusion} 
-            \label{fig:Tampilan Fusion}
+            \label{fig:TampilanFusion1}
         \end{figure}
     \item Berikutnya untuk memulai mendesign rangkaian, klik \textbf{File > New Electonic Design}
         \begin{figure}[H]
@@ -152,10 +151,44 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.6\linewidth]{P1/img/gambar15.jpeg}
-            \caption{Status Library} 
+            
             \label{fig:Status Library}
         \end{figure}
     \item Berikut adalah komponen-komponen yang anda butuhkan :
+    \vspace{5pt}
+    \begin{table}[ht]
+        
+   
+    \begin{center}
+    
+        \caption{Komponen}
+        \label{tab:komponen}
+
+        \begin{tabular}{|c|p{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+            \hline
+            Gambar & Nama & Library & Jumlah & Catatan \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_esp.jpg} &  {\fontsize{10}{6}\selectfont ESP8266} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_resistor.jpg} & {\fontsize{10}{6}\selectfont Resistor} & {\fontsize{8}{6}\selectfont Resistor} & 5 &  {\fontsize{8}{6}\selectfont CHIP 0805} \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_capacitor.jpg} & {\fontsize{10}{6}\selectfont Capacitor} & {\fontsize{8}{6}\selectfont Capacitor} & 2 &  {\fontsize{8}{6}\selectfont CHIP 0805} \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_button_switch.jpg} & {\fontsize{8}{6}\selectfont Button Switch} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 2 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_supply_connector.jpg} & {\fontsize{8}{6}\selectfont Supply Connector} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_ttl_connector.jpg} & {\fontsize{8}{6}\selectfont TTL Connector} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_3.3_voltage_regulator.jpg} & {\fontsize{10}{6}\selectfont 3,3 Voltage Regulator} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \hline
+            \end{tabular}
+        \vspace{-\topsep} % Mengurangi spasi sebelum tabel
+    \end{center}
+\end{table}
+    \vspace{5pt}
+    \\
+    \\
     \item Sambungkan seluruh komponen dengan koneksi pin sebagai berikut :
         \begin{enumerate}
             \item 3.3-VOLTAGE-REGULATOR GND <-> SUPPLY-CONNECTOR GND / GND
@@ -182,8 +215,10 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \caption{Hasil Rangkaian} 
             \label{fig:Hasil Rangkaian}
         \end{figure}
+\end{enumerate}
+        
 
-\section*{PERCOBAAN 2: PCB design Minimum System ESP8266}
+\section{Eksperimen 2: PCB design Minimum System ESP8266}
 Setelah proses penyusunan schematic selesai, waktunya mendesain bagaimana Printed Circuit Board
 dari schematic tersebut akan tersusun.
 \begin{enumerate}
@@ -202,9 +237,9 @@ dari schematic tersebut akan tersusun.
     footprint komponen.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\linewidth]{P1/img/gambar24.jpeg}
+        \includegraphics[width=0.6\linewidth]{P1/img/awal_switch_ke_pcb_design.jpg}
         \caption{PCB awal} 
-        \label{fig:PCB awal}
+        \label{fig:PCBawal}
     \end{figure}
     \vspace{-\topsep}
     \item Masukan seluruh footprint komponen ke dalam Board dengan memilih seluruh footprint menggunakan tools \textbf{Group} dan digerakan dengan menggukan tools \textbf{Move}.
@@ -216,7 +251,7 @@ dari schematic tersebut akan tersusun.
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\linewidth]{P1/img/gambar26.jpeg}
+        \includegraphics[width=0.6\linewidth]{P1/img/masukkan_semua_komponen_ke_lingkup_pcb.jpg}
         \caption{Hasil setelah dipindah} 
         \label{fig:Hasil setelah dipindah}
     \end{figure}
@@ -228,13 +263,14 @@ dari schematic tersebut akan tersusun.
             \caption{PCB awal} 
             \label{fig:PCB awal}
         \end{figure}
-    \item Atur ukuran “Board” dengan menggerakan/geser garis tepi dari “Board” hingga ukuran
+    \item Raphikan tatanan komponen serta atur ukuran “Board” dengan menggerakan/geser garis tepi dari “Board” hingga ukuran
     sesuai dengan tatanan footprint.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.6\linewidth]{P1/img/gambar28.jpeg}
+            \includegraphics[width=0.5\linewidth]{P1/img/rapihkan_tatanan_komponen.jpg}
+            \includegraphics[width=0.45\linewidth]{P1/img/gambar28.jpeg}
             \caption{Setelah board dikecilkan} 
-            \label{fig:Setelah board dikecilkan}
+            \label{fig:Setelah komponen dirapihkan dan dikecilkan}
         \end{figure}
     \item Selanjutnya adalah melakukan routing jalur koneksi. Dalam melakukan Routing, Tools
     utama yang digunakan adalah \textbf{Route Manual} dan \textbf{Unroute} untuk
@@ -278,8 +314,8 @@ dari schematic tersebut akan tersusun.
     \textbf{Contoh rangkaian PCB yang sudah jadi :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.47\linewidth]{P1/img/gambar29.jpeg}
-            \includegraphics[width=0.47\linewidth]{P1/img/gambar30.jpeg}
+            \includegraphics[width=0.47\linewidth]{P1/img/sebelum_di_routing.jpg}
+            \includegraphics[width=0.47\linewidth]{P1/img/setelah_dirouting.jpg}
             \caption{Hasil sebelum dan sesudah di routing}
         \end{figure}
 \end{enumerate}
