@@ -177,9 +177,9 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \hline
             \includegraphics[width=0.1\linewidth]{P1/img/komponen_button_switch.jpg} & {\fontsize{8}{6}\selectfont Button Switch} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 2 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_supply_connector.jpg} & {\fontsize{8}{6}\selectfont Supply Connector} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_POWER_connector.jpg} & {\fontsize{8}{6}\selectfont Connector-Power} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_ttl_connector.jpg} & {\fontsize{8}{6}\selectfont TTL Connector} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \includegraphics[width=0.1\linewidth]{P1/img/komponen_ttl_connector.jpg} & {\fontsize{8}{6}\selectfont Connector-UART} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
             \hline
             \includegraphics[width=0.1\linewidth]{P1/img/komponen_3.3_voltage_regulator.jpg} & {\fontsize{10}{6}\selectfont 3,3 Voltage Regulator} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & {\fontsize{8}{6}\selectfont SOT 223} \\
             \hline
@@ -192,22 +192,22 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
     \\
     \item Sambungkan seluruh komponen dengan koneksi pin sebagai berikut :
         \begin{enumerate}
-            \item 3.3-VOLTAGE-REGULATOR GND <-> SUPPLY-CONNECTOR GND / GND
-            \item 3.3-VOLTAGE-REGULATOR VI <-> SUPPLY-CONNECTOR VCC
-            \item 3.3-VOLTAGE-REGULATOR VI <-> Capacitor (2) <-> SUPPLY-CONNECTOR GND / GND
-            \item 3.3-VOLTAGE-REGULATOR VO <-> Capacitor (1) <->  SUPPLY-CONNECTOR GND / GND
-            \item ESP8266 GND <->  SUPPLY-CONNECTOR GND / GND
+            \item 3.3-VOLTAGE-REGULATOR GND <-> POWER-CONNECTOR GND / GND
+            \item 3.3-VOLTAGE-REGULATOR VI <-> POWER-CONNECTOR VCC
+            \item 3.3-VOLTAGE-REGULATOR VI <-> Capacitor (2) <-> POWER-CONNECTOR GND / GND
+            \item 3.3-VOLTAGE-REGULATOR VO <-> Capacitor (1) <->  POWER-CONNECTOR GND / GND
+            \item ESP8266 GND <->  POWER-CONNECTOR GND / GND
             \item ESP8266 VCC <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 GPIO15 <-> Resistor (1) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 GPIO15 <-> Resistor (1) <->  POWER-CONNECTOR GND / GND
             \item ESP8266 EN <-> Resistor (3) <-> 3.3-VOLTAGE-REGULATOR VO
             \item ESP8266 RST <-> Resistor (2) <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 RST <-> Switch (2) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 RST <-> Switch (2) <->  POWER-CONNECTOR GND / GND
             \item ESP8266 GPIO0 <-> Resistor (4) <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 GPIO0 <-> Switch (1) <-> Resistor (5) <->  SUPPLY-CONNECTOR GND / GND
+            \item ESP8266 GPIO0 <-> Switch (1) <-> Resistor (5) <->  POWER-CONNECTOR GND / GND
             \item ESP8266 RXD <-> TTL-CONNECTOR RXD
             \item ESP8266 TXD <-> TTL-CONNECTOR TXD
-            \item TTL-CONNECTOR VCC <-> 3.3-VOLTAGE-REGULATOR VO
-            \item TTL-CONNECTOR GND <->  SUPPLY-CONNECTOR GND / GND
+            \item UART-CONNECTOR VCC <-> 3.3-VOLTAGE-REGULATOR VO
+            \item UART-CONNECTOR GND <->  POWER-CONNECTOR GND / GND
         \end{enumerate}
     \item Hasil dari rangkaian dari Minimum System ESP8266 adalah sebagai berikut :
         \begin{figure}[H]
