@@ -4,62 +4,69 @@
 \begin{enumerate}
     \item Belajar mendesain sirkuit elektronik menggunakan software
     \item Mengetahui fungsi setiap komponen dan cara implementasinya
-    \item Memahami proses menyusun komponen agar bisa digunakan bersamaan dengan komponen lain
-    untuk melakukan fungsi tertentu
-    \item Untuk memperkenalkan beberapa konsep dasar dan teknik laboratorium dalam mendesain
-    schematic dan PCB
-    \item Mendesain rangkaian PCB yang nantinya dapat dicetak menjadi komponen dengan fungsi
-    tertentu
+    \item Memahami proses menyusun komponen agar bisa digunakan bersamaan dengan komponen lain untuk melakukan fungsi tertentu
+    \item Untuk memperkenalkan beberapa konsep dasar dan teknik laboratorium dalam mendesain schematic dan PCB
+    \item Mendesain rangkaian PCB yang nantinya dapat dicetak menjadi komponen dengan fungsi tertentu
 \end{enumerate}
 
-\section{Dasar Teori}
 \section{Dasar Teori}
 Secara sederhana, Enclosure adalah housing logam atau plastik yang dirancang untuk menutupi dan
 melindungi disk drive, chip, ataupun board didalamnya dari kerusakan serta risiko lain yang bisa
 membahayakan fungsionalitas dan keutuhan komponen didalamnya. Enclosure pada umumnya dapat
 menampung satu board, dan memiliki ukuran yang pas dan sesuai, namun tetap memiliki lubang dan celah
-sehingga bioard didalamnya masih bisa untuk dihubungkan ke komputer host.
+sehingga board didalamnya masih bisa untuk dihubungkan ke komputer host.
 
 Enclosure case yang efektif memungkinkan untuk ditaruh board dengan tepat, tidak sempit ataupun
 longgar, mekanisme penutupan enclosure bisa menggunakan slide, mur, ataupun seperti lego sehingga
-tetap tertutup meskipun digoyang dan digerangkan dengan gaya tertentu. Selain itu, enclosure ini
+tetap tertutup meskipun digoyang dan digerakkan dengan gaya tertentu. Selain itu, enclosure ini
 berfungsi untuk melindungi board dari hal-hal seperti kabel dengan tegangan tertentu yang dapat
 membuat arus pendek pada board. Berikut referensi desain enclosure
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{P3/img/image1.jpg}
+    \caption{Referensi Desain Enclosure}
+    \label{fig:Referensi Desain Enclosure}
+\end{figure}
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=1\linewidth]{P3/img/image1.jpg}
-        \caption{Referensi Enclosure}
-        \label{fig:Referensi Enclosure}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=1\linewidth]{P3/img/image2.jpg}
-        \caption{Komponen Enclosure}
-        \label{fig:Komponen Enclosure}
-    \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{P3/img/image2.jpg}
+    \caption{Komponen Enclosure}
+    \label{fig:Komponen Enclosure}
+\end{figure}
 
 Kesalahan yang seringkali dijumpai pada proses desain 3D yaitu alur kerja yang terlalu repetitive ataupun
 bertele-tele, karena sebenarnya fitur software banyak yang kurang di-explore sehingga saat
 menggunakan software, fitur yang digunakan kurang membantu pengerjaan desain atau bahkan
 memperlamanya. Untuk itu hendaknya mencari referensi, dokumentasi, ataupun inspirasi yang terdapat
-di sekitar seperti lego, laptop, ataupun projektil lain yang dapat ditiru, amati, dan modifikasi desainnya
+di sekitar seperti lego, laptop, ataupun projektil lain yang dapat ditiru, amati, dan modifikasi desainnya.
 
-\section{Kebutuhan}
+\section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Berdoa kepada Tuhan Yang Maha Esa
-    \item PC yang terinstall software Autodesk Fusion 360
-    \item File 3D board untuk fitting ke enclosure
+    \item Buat satu desain kubus pada fusion 360 seperti pada gambar dibawah ini
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{P3/img/soal1.png}
+            \caption{Tugas Pendahuluan}
+            \label{fig:Tugas Pendahuluan}
+        \end{figure}
+    
+    \item Install Ultimaker CURA
+    \item Pahami tentang penggunaan Ultimaker CURA untuk print 3d
 \end{enumerate}
 
-
+\section{Alat dan Komponen}
+\subsection{Alat}
+\begin{enumerate}
+    \item Laptop yang telah terinstall Autodesk Fusion 360
+    \item Laptop yang telah terinstall Ultimaker CURA untuk print 3d
+    \item Mouse
+\end{enumerate}
 
 \section{Eksperimen 1: Membuat Enclosure PCB}
-Buatlah enclosure dari PCB yang disediakan. Enlcosure harus terbagi setidaknya menjadi dua bagian yaitu
+Buatlah enclosure dari PCB yang disediakan. Enclosure harus terbagi setidaknya menjadi dua bagian yaitu
 \textbf{“Bawah”} sebagai tumpuan PCB dan \textbf{“Atas”} sebagai penutup enclosure. Enclosure juga harus memiliki
 lubang power untuk tempat memberi tegangan PCB.
-
 \begin{enumerate}
     \item Sebelum mendesain, upload lah file model 3D dengan type file .stp yang sudah disediakan. Untuk
     mengupload model klik \textbf{“Upload”} di panel sebelah kiri.
@@ -84,60 +91,65 @@ lubang power untuk tempat memberi tegangan PCB.
     memasukan model PCB klik kanan pada model tersebut lalu klik \textbf{“Insert into current Design”}.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{P3/img/image5.jpg}
+            \includegraphics[width=0.5\linewidth]{P3/img/Insert to Current Design.png}
             \caption{Insert Into Curret Design}
             \label{fig:Insert Into Curret Design}
         \end{figure}
 
-        \item Saat membuat enclosure terdapat beberapa tools yang tersedia. Berikut beberapa tools yang
-        akan sering digunakan dalam pembuatan enclosure:
-            \begin{figure}[H]
-                \centering
-                \includegraphics[width=0.1\linewidth]{P3/img/image6.jpg}
-                \caption{Sketch}
-                \label{fig:Sketch}
-            \end{figure}
-        \begin{flushleft}
-    Sketch: menggambar sketsa 2D dari bentuk yang akan dibuat. Sketsa ini dapat digunakan
-    bersama Extrude untuk membuat nya menjadi body 3D.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{P3/img/Sudah di Insert.png}
+            \caption{Sudah di Insert}
+            \label{fig:Sudah di Insert}
+        \end{figure}
+
+    \item Saat membuat enclosure terdapat beberapa tools yang tersedia. Berikut beberapa tools yang
+    akan sering digunakan dalam pembuatan enclosure:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.1\linewidth]{P3/img/image6.jpg}
+            \caption{Sketch}
+            \label{fig:Sketch}
+        \end{figure}
+        
+        \textbf{Sketch}: menggambar sketsa 2D dari bentuk yang akan dibuat. Sketsa ini dapat digunakan
+        bersama Extrude untuk membuat nya menjadi body 3D.
+            
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image7.jpg}
             \caption{Extrude}
             \label{fig:Extrude}
         \end{figure}
-    Extrude: Mengatur ukuran dari body. Bisa digunakan untuk memperpanjang atau
-    memperpendek suatu sisi dari body.
+
+        \textbf{Extrude}: Mengatur ukuran dari body. Bisa digunakan untuk memperpanjang atau
+        memperpendek suatu sisi dari body.
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image8.jpg}
             \caption{Combine}
             \label{fig:Combine}
         \end{figure}
-    Combine: Menggabungkan dua atau lebih body menjadi satu.
+    
+        \textbf{Combine}: Menggabungkan dua atau lebih body menjadi satu.
+            
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.1\linewidth]{P3/img/image9.jpg}
             \caption{Measure}
             \label{fig:Measure}
         \end{figure}
-    Measure: Mengukur body Model 3D
+        \textbf{Measure}: Mengukur body Model 3D
+            
         \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.1\linewidth]{P3/img/image10.jpg}
-            \caption{Camera}
-            \label{fig:Camera}
-        \end{figure}
-    Camera: Menggerakan Camera (Dapat juga menggunakan shift+ klik scroll mouse + gerak
-    mouse).
-    \end{flushleft}
-\end{enumerate}
+                \centering
+                \includegraphics[width=0.1\linewidth]{P3/img/image10.jpg}
+                \caption{Camera}
+                \label{fig:Camera}
+            \end{figure}
+        \textbf{Camera}: Menggerakan Camera (Dapat juga menggunakan shift+ klik scroll mouse + gerak
+        mouse).
 
-\section{Aturan Pengerjaan:}
-\begin{enumerate}
-    \item Berdoa kepada Tuhan Yang Maha Esa
-    \item PC yang terinstall software Autodesk Fusion 360
-    \item File 3D board untuk fitting ke enclosure
     \item PBC yang dimasukan digunakan sebagai referensi ukuran enclosure yang akan dibuat. Gunakan
     Tools \textbf{“Measure”} untuk mengukur dimensi dari PCB.
     \item Setelah didapat ukuran PCB Gunakan Tools \textbf{“Sketch”} untuk membuat sketsa 2D yang nanti nya
@@ -152,7 +164,14 @@ lubang power untuk tempat memberi tegangan PCB.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{P3/img/image11.jpg}
-    \caption{Hasil Jadi Enclosure}
-    \label{fig:Hasil Jadi Enclosure}
+    \includegraphics[width=0.6\linewidth]{P3/img/Casing board v20 close.png}
+    \caption{Enclosure close}
+    \label{fig:Enclosure close}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{P3/img/Casing board v20 open.png}
+    \caption{Enclosure open}
+    \label{fig:Enclosure open}
 \end{figure}
