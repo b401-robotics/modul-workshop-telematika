@@ -86,7 +86,7 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
 \section{Eksperimen 2: Penempatan Komponen dan Penyolderan}
 \begin{enumerate}
     \item Siapkan komponen yang akan disolder.
-    \item Buka dokumentasi ESP8266 Kit untuk melihat posisi komponen.
+    \item Buka dokumentasi Github \url{https://github.com/b401-robotics/esp8266-minsys} folder hardware untuk melihat posisi komponen.
     \item Letakkan komponen SMD pada PCB sesuai dengan posisi mengikuti dokumentasi.
     \begin{center}
         \colorbox{pink}{\parbox{0.8\linewidth}{\textbf{Catatan:} Perhatikan posisi positif dan negatif pada komponen polar.}}
@@ -155,6 +155,15 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
     \item Upload firmware menggunakan PlatformIO.
     \item Tunggu hingga proses upload berhasil.
     \item Jika LED menyala, lanjut ke eksperimen selanjutnya.
+    \item Jika tidak, ulangi proses upload
+    \item Dokumentasikan hasil.
+\end{enumerate}
+
+\section{Eksperimen 4: Pengujian Program Kelompok}
+\begin{enumerate}
+    \item Siapkan program yang akan diuji.
+    
+    \item Masukkan program pada tugas pendahuluan ke dalam template yang sudah disediakan.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P4/img/11_tampilan_ssid_ap_ketika_sudah_berhasil_diflash.png}
@@ -165,7 +174,7 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
         \centering
         \includegraphics[width=0.4\linewidth]{P4/img/12_tampilan_ota_siap_upload.png}
         \caption{Tampilan OTA}
-        \label{fig:Tampilan OTA}
+        \label{fig:TampilanOTA}
     \end{figure}
     \begin{figure}[H]
         \centering
@@ -173,15 +182,7 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
         \caption{Tampilan Sukses Upload}
         \label{fig:TampilaSuksesUpload}
     \end{figure}
-    \item Jika tidak, ulangi proses upload
-    \item Dokumentasikan hasil.
-\end{enumerate}
-
-\section{Eksperimen 4: Pengujian Program Kelompok}
-\begin{enumerate}
-    \item Siapkan program yang akan diuji.
-    \item Masukkan program yang sudah dibuat pada template yang sudah disediakan.
-    \item Upload program menggunakan PlatformIO.
+    \item Upload program menggunakan PlatformIO dan Fitur OTA, pada gambar \ref{fig:TampilanSSIDAP}, \ref{fig:TampilanOTA}, dan \ref{fig:TampilaSuksesUpload}.
     \item Tes sesuai dengan klik tombol dan pastikan sesuai dengan hasil yang seharusnya.
     \item Dokumentasikan hasilnya.
 \end{enumerate}
