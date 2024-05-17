@@ -37,17 +37,11 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 \begin{enumerate}
     \item Install Fusion 360 pada Laptop masing-masing anggota kelompok
     \item Buat jalur PCB rangkaian regulator lm7805 dari schematic yang telah disediakan pada folder praktikan
+    \item Buatlah Wiring Schematic Minimum System ESP8266! Caranya seperti dibawah.
 \end{enumerate}
 
-\section{Alat dan Komponen}
-\subsection{Alat}
-\begin{enumerate}
-    \item Laptop yang telah terinstall Autodesk Fusion 360
-    \item Mouse
-\end{enumerate}
-
-\section{Eksperimen 1: Wiring Schematic Minimum System ESP8266}
-Pada eksperimen 1, akan dibuat sebuah desain schematic Minimum System untuk menjalankan 
+\section{Wiring Schematic Minimum System ESP8266}
+Untuk Tugas Pendahuluan, akan dibuat sebuah desain schematic Minimum System untuk menjalankan 
 chip ESP8266 sehingga dapat dihubungkan dengan komputer dan dilakukan flash program ke ROM nya. 
 Minimum System ESP8266 ini akan disuply dayanya dengan tegangan sebesar 3,3 Volt yang diatur 
 oleh 3,3-Voltage Regulator nya. Untuk dapat menyambungkan ESP8266 dengan host computer yang 
@@ -169,19 +163,31 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \hline
             Gambar & Nama & Library & Jumlah & Catatan \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_esp.jpg} &  {\fontsize{10}{6}\selectfont ESP8266} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \includegraphics[width=0.05\linewidth]{P1/img/Header_1x7_2.png} &  {\fontsize{8}{6}\selectfont HEADER 1x7} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_resistor.jpg} & {\fontsize{10}{6}\selectfont Resistor} & {\fontsize{8}{6}\selectfont Resistor} & 5 &  {\fontsize{8}{6}\selectfont CHIP 0805} \\
+            \includegraphics[width=0.05\linewidth]{P1/img/Header_1x5_2.png} & {\fontsize{8}{6}\selectfont HEADER 1X5} & {\fontsize{8}{6}\selectfont WorTel Library} & 1 &  - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_capacitor.jpg} & {\fontsize{10}{6}\selectfont Capacitor} & {\fontsize{8}{6}\selectfont Capacitor} & 2 &  {\fontsize{8}{6}\selectfont CHIP 0805} \\
+            \includegraphics[width=0.05\linewidth]{P1/img/ESP-12F_2.png} & {\fontsize{8}{6}\selectfont ESP-12F} & {\fontsize{8}{6}\selectfont WorTel Library} & 1 &  - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_button_switch.jpg} & {\fontsize{8}{6}\selectfont Button Switch} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 2 & - \\
+            \includegraphics[width=0.05\linewidth]{P1/img/CH340_2.png} & {\fontsize{8}{6}\selectfont CH340} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_supply_connector.jpg} & {\fontsize{8}{6}\selectfont Connector-Power} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \includegraphics[width=0.05\linewidth]{P1/img/USB-C_2.png} & {\fontsize{8}{6}\selectfont USB-C} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_ttl_connector.jpg} & {\fontsize{8}{6}\selectfont Connector-UART} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & - \\
+            \includegraphics[width=0.05\linewidth]{P1/img/Regulator_3V3_2.png} & {\fontsize{8}{6}\selectfont Regulator 3V3} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P1/img/komponen_3.3_voltage_regulator.jpg} & {\fontsize{10}{6}\selectfont 3,3 Voltage Regulator} &  {\fontsize{9}{6}\selectfont WorTel2023 Library} & 1 & {\fontsize{8}{6}\selectfont SOT 223} \\
+            \includegraphics[width=0.1\linewidth]{P1/img/WS2812B_2.png} & {\fontsize{8}{6}\selectfont WS2812B} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/Button_2.png} & {\fontsize{8}{6}\selectfont Button} &  {\fontsize{8}{6}\selectfont WorTel Library} & 2 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/Capacitor_2.png} & {\fontsize{8}{6}\selectfont Capacitor} &  {\fontsize{8}{6}\selectfont WorTel Library} & 5 & {\fontsize{8}{6}\selectfont 100uF(3), 100nf(1), 1uF(1)} \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/Fuse_2.png} & {\fontsize{8}{6}\selectfont Fuse} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/LED_2.png} & {\fontsize{8}{6}\selectfont LED} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/NMOSFET_2.png} & {\fontsize{8}{6}\selectfont NMOSFET} &  {\fontsize{8}{6}\selectfont WorTel Library} & 2 & - \\
+            \hline
+            \includegraphics[width=0.1\linewidth]{P1/img/RESISTOR_2.png} & {\fontsize{8}{6}\selectfont Resistor} &  {\fontsize{8}{6}\selectfont WorTel Library} & 7 & {\fontsize{8}{6}\selectfont 10k(4), 5.1k(2), 1k(1)} \\
             \hline
             \end{tabular}
         \vspace{-\topsep} % Mengurangi spasi sebelum tabel
@@ -190,36 +196,24 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
     \vspace{5pt}
     \\
     \\
-    \item Sambungkan seluruh komponen dengan koneksi pin sebagai berikut :
-        \begin{enumerate}
-            \item 3.3-VOLTAGE-REGULATOR GND <-> POWER-CONNECTOR GND / GND
-            \item 3.3-VOLTAGE-REGULATOR VI <-> POWER-CONNECTOR VCC
-            \item 3.3-VOLTAGE-REGULATOR VI <-> Capacitor (2) <-> POWER-CONNECTOR GND / GND
-            \item 3.3-VOLTAGE-REGULATOR VO <-> Capacitor (1) <->  POWER-CONNECTOR GND / GND
-            \item ESP8266 GND <->  POWER-CONNECTOR GND / GND
-            \item ESP8266 VCC <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 GPIO15 <-> Resistor (1) <->  POWER-CONNECTOR GND / GND
-            \item ESP8266 EN <-> Resistor (3) <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 RST <-> Resistor (2) <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 RST <-> Switch (2) <->  POWER-CONNECTOR GND / GND
-            \item ESP8266 GPIO0 <-> Resistor (4) <-> 3.3-VOLTAGE-REGULATOR VO
-            \item ESP8266 GPIO0 <-> Switch (1) <-> Resistor (5) <->  POWER-CONNECTOR GND / GND
-            \item ESP8266 RXD <-> TTL-CONNECTOR RXD
-            \item ESP8266 TXD <-> TTL-CONNECTOR TXD
-            \item UART-CONNECTOR VCC <-> 3.3-VOLTAGE-REGULATOR VO
-            \item UART-CONNECTOR GND <->  POWER-CONNECTOR GND / GND
-        \end{enumerate}
+    \item Sambungkan seluruh komponen dengan koneksi pin.
     \item Hasil dari rangkaian dari Minimum System ESP8266 adalah sebagai berikut :
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.6\linewidth]{P1/img/gambar23.jpeg}
+            \includegraphics[width=0.6\linewidth]{P1/img/gambar23.jpg}
             \caption{Hasil Rangkaian} 
             \label{fig:Hasil Rangkaian}
         \end{figure}
 \end{enumerate}
-        
 
-\section{Eksperimen 2: PCB design Minimum System ESP8266}
+\section{Alat dan Komponen}
+\subsection{Alat}
+\begin{enumerate}
+    \item Laptop yang telah terinstall Autodesk Fusion 360
+    \item Mouse
+\end{enumerate}
+
+\section{Eksperimen 1: PCB design Minimum System ESP8266}
 Setelah proses penyusunan schematic selesai, waktunya mendesain bagaimana Printed Circuit Board
 dari schematic tersebut akan tersusun.
 \begin{enumerate}
@@ -315,8 +309,7 @@ dari schematic tersebut akan tersusun.
     \textbf{Contoh rangkaian PCB yang sudah jadi :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.47\linewidth]{P1/img/sebelum_di_routing.jpg}
-            \includegraphics[width=0.47\linewidth]{P1/img/setelah_dirouting.jpg}
-            \caption{Hasil sebelum dan sesudah di routing}
+            \includegraphics[width=0.47\linewidth]{P1/img/gambar_jadi.jpg}
+            \caption{Hasil sesudah di routing}
         \end{figure}
 \end{enumerate}
