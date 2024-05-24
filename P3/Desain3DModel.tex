@@ -175,3 +175,75 @@ lubang power untuk tempat memberi tegangan PCB.
     \caption{Enclosure open}
     \label{fig:Enclosure open}
 \end{figure}
+\section{Eksperimen 2: Mencetak Enclosure PCB}
+Setelah Enclosure PCB telah dibuat, saatnya mencetaknya menggunakan Ulitmaker CURA. 
+\begin{enumerate}
+    \item Sebelum mencetaknya, eksport enclosure secara terpisah bagian
+     \textbf{“Bawah”} dan \textbf{“Atas”} dengan format file .STL.
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Eksport.png}
+        \caption{Eksport}
+        \label{fig:Eksport}
+    \end{figure}
+    \item Setelah mengeksportnya, buka ultimaker cura dan klik \textbf{“File”} kemudian 
+    \textbf{“Open file”} dan pilih kedua file yang tadi sudah di eksport, 
+    lalu posisikan agar tidak tergabung satu sama lain.
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Open File.png}
+        \caption{Open File}
+        \label{fig:Open File}
+    \end{figure}
+    \item Untuk yang bagian \textbf{“Atas”}, rotasikan 180 derajat agar bisa dicetak dengan support yang minim.
+    \begin{figure}[H]
+       \centering
+       \includegraphics[width=0.5\linewidth]{P3/img/Enclosure 3D.png}
+       \caption{Enclosure bagian 'Atas' Sudah dibalik}
+       \label{fig:Enclosure}
+   \end{figure}
+    \item Saatnya melakukan konfigurasi sebelum enclosure dicetak, tekan bagian standart quality pada bagian kanan atas 
+    lalu settingan yang kita ubah hanya bagian walls, infill, material, cooling, support,dan build plate adhesion.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/settings.png}
+        \caption{Print settings}
+        \label{fig:Settings}
+    \end{figure}
+    \item Pada bagian walls, bagian yang diubah adalah "Wall Thickness" dan "Wall Line Count" sesuai gambar dibawah. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Setting walls.png}
+        \caption{Setting Walls}
+        \label{fig:Settings walls}
+    \end{figure}
+
+    \item Pada bagian infill, yang diubah adalah "Infill Density" dan "Infill Pattern" sesuai gambar dibawah.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Settings infill.png}
+        \caption{Setting Infill}
+        \label{fig:Settings Infill}
+    \end{figure}
+    \item Pada bagian material, yang diubah adalah "Printing Temperature" dan "Build Plate Temperature" sesuai gambar dibawah.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Settings material.png}
+        \caption{Settings Material}
+        \label{fig:Settings Material}
+    \end{figure}
+    \item Pada bagian cooling, yang diubah adalah "Fan Speed" sesuai gambar dibawah.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Settings cooling.png}
+        \caption{Settings cooling}
+        \label{fig:Settings Cooling}
+    \end{figure}
+    \item Pada bagian build plate adhesion, yang diubah adalah "Build Plate Adhesion Type" dan "Brim Line Count" sesuai gambar dibawah.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Settings Build.png}
+        \caption{Settings Build Plate Adhesion}
+        \label{fig:Settings Build Plate Adhesion}
+    \end{figure}
+\end{enumerate}
