@@ -35,8 +35,6 @@ yang mendapat suplai daya tersebut sudah pasti terkoneksi dengan benar.
 
 \section{Tugas Pendahuluan}
 \begin{enumerate}
-    \item Install Fusion 360 pada Laptop masing-masing anggota kelompok
-    \item Buat jalur PCB rangkaian regulator lm7805 dari schematic yang telah disediakan pada folder praktikan
     \item Buatlah Wiring Schematic Minimum System ESP8266! Caranya seperti dibawah.
 \end{enumerate}
 
@@ -45,8 +43,9 @@ Untuk Tugas Pendahuluan, akan dibuat sebuah desain schematic Minimum System untu
 chip ESP8266 sehingga dapat dihubungkan dengan komputer dan dilakukan flash program ke ROM nya. 
 Minimum System ESP8266 ini akan disuply dayanya dengan tegangan sebesar 3,3 Volt yang diatur 
 oleh 3,3-Voltage Regulator nya. Untuk dapat menyambungkan ESP8266 dengan host computer yang 
-dapat melakukan flash programnya maka digunakan connector JST 4 PIN TTL to USB, 
-sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP8266 juga memiliki 
+dapat melakukan flash programnya maka digunakan connector TYPE-C 16Pin, 
+sebagai penghubung koneksi ESP8266 dengan host computer. Selain itu, juga bisa menggunakan JST 4Pin TTL to USB.
+Minimum System dari ESP8266 juga memiliki 
 2 switch yang digunakan untuk melakukan Reset dan Flash.
 \begin{enumerate}
     \item Untuk memulai membuat project klik \textbf{New Project} di kiri atas dan beri nama sesuai yang kalian inginkan
@@ -149,6 +148,8 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             
             \label{fig:Status Library}
         \end{figure}
+
+    \newpage
     \item Berikut adalah komponen-komponen yang anda butuhkan :
     \vspace{5pt}
     \begin{table}[ht]
@@ -163,13 +164,7 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \hline
             Gambar & Nama & Library & Jumlah & Catatan \\
             \hline
-            \includegraphics[width=0.05\linewidth]{P2/img/Header_1x7_2.png} &  {\fontsize{8}{6}\selectfont HEADER 1x7} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
-            \hline
-            \includegraphics[width=0.05\linewidth]{P2/img/Header_1x5_2.png} & {\fontsize{8}{6}\selectfont HEADER 1X5} & {\fontsize{8}{6}\selectfont WorTel Library} & 1 &  - \\
-            \hline
             \includegraphics[width=0.05\linewidth]{P2/img/ESP-12F_2.png} & {\fontsize{8}{6}\selectfont ESP-12F} & {\fontsize{8}{6}\selectfont WorTel Library} & 1 &  - \\
-            \hline
-            \includegraphics[width=0.05\linewidth]{P2/img/CH340_2.png} & {\fontsize{8}{6}\selectfont CH340} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
             \includegraphics[width=0.05\linewidth]{P2/img/USB-C_2.png} & {\fontsize{8}{6}\selectfont USB-C} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
@@ -179,13 +174,11 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
             \hline
             \includegraphics[width=0.1\linewidth]{P2/img/Button_2.png} & {\fontsize{8}{6}\selectfont Button} &  {\fontsize{8}{6}\selectfont WorTel Library} & 2 & - \\
             \hline
-            \includegraphics[width=0.1\linewidth]{P2/img/Capacitor_2.png} & {\fontsize{8}{6}\selectfont Capacitor} &  {\fontsize{8}{6}\selectfont WorTel Library} & 5 & {\fontsize{8}{6}\selectfont 100uF(3), 100nf(1), 1uF(1)} \\
+            \includegraphics[width=0.1\linewidth]{P2/img/Capacitor_2.png} & {\fontsize{8}{6}\selectfont Capacitor} &  {\fontsize{8}{6}\selectfont WorTel Library} & 3 & {\fontsize{8}{6}\selectfont 100uF(1), 10uF(2)} \\
             \hline
             \includegraphics[width=0.1\linewidth]{P2/img/Fuse_2.png} & {\fontsize{8}{6}\selectfont Fuse} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
             \hline
             \includegraphics[width=0.1\linewidth]{P2/img/LED_2.png} & {\fontsize{8}{6}\selectfont LED} &  {\fontsize{8}{6}\selectfont WorTel Library} & 1 & - \\
-            \hline
-            \includegraphics[width=0.1\linewidth]{P2/img/NMOSFET_2.png} & {\fontsize{8}{6}\selectfont NMOSFET} &  {\fontsize{8}{6}\selectfont WorTel Library} & 2 & - \\
             \hline
             \includegraphics[width=0.1\linewidth]{P2/img/RESISTOR_2.png} & {\fontsize{8}{6}\selectfont Resistor} &  {\fontsize{8}{6}\selectfont WorTel Library} & 7 & {\fontsize{8}{6}\selectfont 10k(4), 5.1k(2), 1k(1)} \\
             \hline
@@ -200,11 +193,12 @@ sebagai penghubung koneksi ESP8266 dengan host computer. Minimum System dari ESP
     \item Hasil dari rangkaian dari Minimum System ESP8266 adalah sebagai berikut :
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.6\linewidth]{P2/img/gambar23.jpg}
+            \includegraphics[width=0.6\linewidth]{P2/img/Hasil Schematic .png}
             \caption{Hasil Rangkaian} 
             \label{fig:Hasil Rangkaian}
         \end{figure}
 \end{enumerate}
+\newpage
 
 \section{Alat dan Komponen}
 \subsection{Alat}
