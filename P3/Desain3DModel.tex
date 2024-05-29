@@ -2,11 +2,10 @@
 
 \section{Tujuan}
 \begin{enumerate}
-    \item Belajar mendesain sirkuit elektronik menggunakan software
-    \item Mengetahui fungsi setiap komponen dan cara implementasinya
-    \item Memahami proses menyusun komponen agar bisa digunakan bersamaan dengan komponen lain untuk melakukan fungsi tertentu
-    \item Untuk memperkenalkan beberapa konsep dasar dan teknik laboratorium dalam mendesain schematic dan PCB
-    \item Mendesain rangkaian PCB yang nantinya dapat dicetak menjadi komponen dengan fungsi tertentu
+    \item Belajar mendesain model 3D menggunakan software
+    \item Mengetahui berbagai tools yang tersedia pada software desain 3D serta fungsinya
+    \item Mengetahui bagaimana melakukan slicing model 3D yang nantinya akan diprint
+    \item Mengetahui bagaimana melakukan proses printing dengan 3D printer
 \end{enumerate}
 
 \section{Dasar Teori}
@@ -50,9 +49,7 @@ di sekitar seperti lego, laptop, ataupun projektil lain yang dapat ditiru, amati
             \caption{Tugas Pendahuluan}
             \label{fig:Tugas Pendahuluan}
         \end{figure}
-    
     \item Install Ultimaker CURA
-    \item Pahami tentang penggunaan Ultimaker CURA untuk print 3d
 \end{enumerate}
 
 \section{Alat dan Komponen}
@@ -91,14 +88,14 @@ lubang power untuk tempat memberi tegangan PCB.
     memasukan model PCB klik kanan pada model tersebut lalu klik \textbf{“Insert into current Design”}.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{P3/img/Insert to Current Design.png}
+            \includegraphics[width=0.5\linewidth]{P3/img/Insert to Current Design 2.jpg}
             \caption{Insert Into Curret Design}
             \label{fig:Insert Into Curret Design}
         \end{figure}
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{P3/img/Sudah di Insert.png}
+            \includegraphics[width=0.5\linewidth]{P3/img/Insert PCB.jpg}
             \caption{Sudah di Insert}
             \label{fig:Sudah di Insert}
         \end{figure}
@@ -164,14 +161,14 @@ lubang power untuk tempat memberi tegangan PCB.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{P3/img/Casing board v20 close.png}
+    \includegraphics[width=0.5\linewidth]{P3/img/Enclosure Close 2.jpg}
     \caption{Enclosure close}
     \label{fig:Enclosure close}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{P3/img/Casing board v20 open.png}
+    \includegraphics[width=0.5\linewidth]{P3/img/Enclosure Open 2.jpg}
     \caption{Enclosure open}
     \label{fig:Enclosure open}
 \end{figure}
@@ -198,7 +195,7 @@ Setelah Enclosure PCB telah dibuat, saatnya mencetaknya menggunakan Ulitmaker CU
     \item Untuk yang bagian \textbf{“Atas”}, rotasikan 180 derajat agar bisa dicetak dengan support yang minim.
     \begin{figure}[H]
        \centering
-       \includegraphics[width=0.5\linewidth]{P3/img/Enclosure 3D.png}
+       \includegraphics[width=0.5\linewidth]{P3/img/Enclosure 3D 2.jpg}
        \caption{Enclosure bagian 'Atas' Sudah dibalik}
        \label{fig:Enclosure}
    \end{figure}
@@ -210,7 +207,8 @@ Setelah Enclosure PCB telah dibuat, saatnya mencetaknya menggunakan Ulitmaker CU
         \caption{Print settings}
         \label{fig:Settings}
     \end{figure}
-    \item Pada bagian walls, bagian yang diubah adalah "Wall Thickness" dan "Wall Line Count" sesuai gambar dibawah. 
+    \item Pada bagian walls, digunakan untuk mengatur ketebalan dindingnya dan berapa banyak lapisan,
+    bagian yang diubah adalah "Wall Thickness" menjadi 0.8mm dan "Wall Line Count" menjadi 2 sesuai gambar dibawah. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{P3/img/Setting walls.png}
@@ -218,32 +216,51 @@ Setelah Enclosure PCB telah dibuat, saatnya mencetaknya menggunakan Ulitmaker CU
         \label{fig:Settings walls}
     \end{figure}
 
-    \item Pada bagian infill, yang diubah adalah "Infill Density" dan "Infill Pattern" sesuai gambar dibawah.
+    \item Pada bagian infill, digunakan untuk mengatur kerapatan dinidng dalamnya dan juga bentuknya bagaimana,
+    yang diubah adalah "Infill Density" menjadi 20\% dan "Infill Pattern" menggunakan Lines sesuai gambar dibawah.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\linewidth]{P3/img/Settings infill.png}
+        \includegraphics[width=0.5\linewidth]{P3/img/Settings infill 2.png}
         \caption{Setting Infill}
         \label{fig:Settings Infill}
     \end{figure}
-    \item Pada bagian material, yang diubah adalah "Printing Temperature" dan "Build Plate Temperature" sesuai gambar dibawah.
+    \item Pada bagian material, digunakan untuk mengubah suhu untuk memanaskan filamennya dan juga suhu pada platenya,
+    yang diubah adalah "Printing Temperature" menjadi 205\degree C dan "Build Plate Temperature" menjadi 60\degree C sesuai gambar dibawah.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{P3/img/Settings material.png}
         \caption{Settings Material}
         \label{fig:Settings Material}
     \end{figure}
-    \item Pada bagian cooling, yang diubah adalah "Fan Speed" sesuai gambar dibawah.
+    \item Pada bagian cooling, digunakan untuk mengatur seberapa cepat kecepatan kipasnya,
+    yang diubah adalah "Fan Speed" menjadi 100\% sesuai gambar dibawah.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\linewidth]{P3/img/Settings cooling.png}
         \caption{Settings cooling}
         \label{fig:Settings Cooling}
     \end{figure}
-    \item Pada bagian build plate adhesion, yang diubah adalah "Build Plate Adhesion Type" dan "Brim Line Count" sesuai gambar dibawah.
+    \item Pada bagian build plate adhesion, digunakan sebagai batasan area 3D printnya
+    yang diubah adalah "Build Plate Adhesion Type" menggunakan Brim dan "Brim Line Count" menjadi 20 sesuai gambar dibawah.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\linewidth]{P3/img/Settings Build.png}
+        \includegraphics[width=0.7\linewidth]{P3/img/Settings Build.png}
         \caption{Settings Build Plate Adhesion}
         \label{fig:Settings Build Plate Adhesion}
+    \end{figure}
+    \item Setelah melakukan settingan untuk 3D printing, tekan \textbf{"Slice"} lalu \textbf{"Preview"} untuk melihat lapisan lapisan pada 3D model dan
+    bagaimana 3D printer melakukan printing.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{P3/img/Hasil slice 2.jpg}
+        \caption{Hasil Slice}
+        \label{fig:Hasil Slice}
+    \end{figure}
+    \item Jika sudah selesai semua, simpan hasil kalian dengan tekan \textbf{"Save to Disk"}, simpan dengan nama file \textbf{"Kelompok xx"} menggunakan tipe file .gcode.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{P3/img/Save file.png}
+        \caption{Save file}
+        \label{fig:Save file}
     \end{figure}
 \end{enumerate}
