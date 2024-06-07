@@ -1,8 +1,8 @@
-\chapter{ESP8266 Minimum System}
+\chapter{ESP8266 Development Board}
 
 \section{Tujuan}
 \begin{enumerate}
-    \item Mempraktikkan teknik penyolderan SMD untuk membangun Minimum System pada mikrokontroler ESP8266.
+    \item Mempraktikkan teknik penyolderan SMD untuk membangun Development Board pada mikrokontroler ESP8266.
     \item Memahami karakteristik dan kebutuhan khusus dalam penyolderan komponen SMD.
     \item Mendapatkan keahlian dalam menangani alat solder untuk komponen elektronik ukuran kecil.
     \item Mengembangkan kemampuan untuk membaca skematik dan menerapkannya pada pembuatan prototipe elektronik.
@@ -10,7 +10,7 @@
 \end{enumerate}
 
 \section{Dasar Teori}
-Minimum System ESP8266 merupakan papan pengembangan yang dirancang untuk memudahkan penggunaan mikrokontroler ESP8266. ESP8266 sendiri adalah mikrokontroler dengan kemampuan Wi-Fi dan Bluetooth terintegrasi yang sering digunakan untuk proyek IoT (Internet of Things). Dalam penyolderan ESP8266, komponen elektronik dipasang langsung ke permukaan PCB tanpa menggunakan kaki atau pin melalui lubang. 
+Development Board ESP8266 merupakan papan pengembangan yang dirancang untuk memudahkan penggunaan mikrokontroler ESP8266. ESP8266 sendiri adalah mikrokontroler dengan kemampuan Wi-Fi dan Bluetooth terintegrasi yang sering digunakan untuk proyek IoT (Internet of Things). Dalam penyolderan ESP8266, komponen elektronik dipasang langsung ke permukaan PCB tanpa menggunakan kaki atau pin melalui lubang. 
 
 Penyolderan SMD memerlukan presisi dan kecermatan karena ukuran komponen yang sangat kecil dan pad yang berdekatan satu sama lain. Penggunaan stencil dalam proses penyolderan SMD memungkinkan aplikasi pasta solder yang seragam dan akurat, yang sangat penting untuk mencegah short-circuit pada pad-pad yang berdekatan.
 
@@ -20,8 +20,8 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
 \begin{enumerate}
     \item Install Visual Studio Code 
     \item Install ekstensi PlatformIO pada Visual Studio Code 
-    \item Download firmware dari \url{https://its.id/m/wortel-firmware} lalu build project menggunakan vscode + Platformio sampai sukses
-    \item Bukalah \url{https://its.id/m/wortel-simulasi} berikut lalu buat program untuk menghidupkan lampu ketika tombol ditekan
+    \item Download firmware dari \url{https://intip.in/WortelBoardGn24} lalu build project menggunakan vscode + Platformio sampai sukses
+    \item Bukalah \url{https://intip.in/TupenWortelP4} berikut lalu buat program untuk menghidupkan lampu ketika tombol ditekan
 
 \end{enumerate}
 
@@ -43,7 +43,7 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
 
 \subsection{Komponen}
 \begin{enumerate}
-    \item Minimum System ESP8266 Kit
+    \item Development Board ESP8266 Kit
 \end{enumerate}
 
 \section{Eksperimen 1: Stencil dan Aplikasi Pasta Solder}
@@ -135,7 +135,7 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
 \section{Eksperimen 3: Upload Firmware dan Pengujian Fungsional}
 \begin{enumerate}
     \item Siapkan modul USB to TTL.
-    \item Hubungkan modul ke komputer dan Minimum System ESP8266.
+    \item Hubungkan modul ke komputer dan Development Board ESP8266.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P4/img/10_hubungkan_dengan_usbttl_dan_laptop.jpeg}
