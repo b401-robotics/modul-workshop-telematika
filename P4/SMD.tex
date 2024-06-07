@@ -105,13 +105,13 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
         \caption{Tampilan Board Setelah Dipasang Komponen}
         \label{fig:KeadaanBoardSetelahDipasangKomponen}
     \end{figure}
-    \item Siapkan solder uap (panaskan solder uap hingga 400$^{\circ}$C).
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\linewidth]{P4/img/6_pastikan_switch_solder_uap_on_dan_suhu_standart_450.jpeg}
-        \caption{Solder Uap On dan Suhu Standart 450$^{\circ}$C}
-        \label{fig:SolderUapOn}
-    \end{figure}
+    \item Siapkan solder uap.
+    % \begin{figure}[H]
+    %     \centering
+    %     \includegraphics[width=0.4\linewidth]{P4/img/6_pastikan_switch_solder_uap_on_dan_suhu_standart_450.jpeg}
+    %     \caption{Solder Uap On dan Suhu Standart 450$^{\circ}$C}
+    %     \label{fig:SolderUapOn}
+    % \end{figure}
     \item Solder komponen satu per satu dengan cara dekatkan ujung solder uap ke komponen hingga komponen menempel pada pcb. Pastikan kompone mengering sebelum berpindah ke komponen yang lain.
     \begin{center}
         \colorbox{pink}{\parbox{0.8\linewidth}{\textbf{Tips:} Solder komponen ESP8266 terlebih dahulu.}}
@@ -142,54 +142,39 @@ Proses penyolderan SMD untuk ESP8266 melibatkan langkah-langkah seperti penyiapa
 \begin{enumerate}
     \item Siapkan modul USB to TTL.
     \item Hubungkan modul ke komputer dan Development Board ESP8266.
+    \subitem 5V TTL -> 5V ESP8266
+    \subitem Tx TTL -> Rx ESP8266
+    \subitem Rx TTL -> Tx ESP8266
+    \subitem Gnd TTL -> Gnd ESP8266
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P4/img/10_hubungkan_dengan_usbttl_dan_laptop.jpeg}
         \caption{USBTTL Dihubungkan ke Laptop}
         \label{fig:USBTTLLaptop}
     \end{figure}
-    \item Download project esp8266-minsys yang tersedia pada github dengan link berikut: \url{https://github.com/b401-robotics/esp8266-minsys}
-    \item Bukalah subfolder firmware pada folder project yang sudah didownload dengan menggunakan PlatformIO
-    \item Masuk mode bootloader dengan cara menahan tombol boot dan menekan satu kali tombol reset.
-    \item Lepaskan tombol boot.
+    \item Bukalah subfolder firmware pada folder project yang sudah didownload pada tugas pendahuluan dengan menggunakan PlatformIO
+    \item Masuk mode bootloader pada board ESP8266, caranya dengan menahan tombol boot, lalu menekan satu kali tombol reset.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.4\linewidth]{P4/img/10_tampilan_ketika_esp_masuk_bootloader.png}
         \caption{Tampilan Mode Bootloader}
         \label{fig:TampilanModeBoot}
     \end{figure}
-    \item Upload firmware menggunakan PlatformIO.
+    \item Upload firmware menggunakan PlatformIO, caranya klik icon panah pada pojok kiri bawah.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{P4/img/14_icon_upload_platformIO.png}
+        \caption{Icon Upload PlatformIO}
+        \label{fig:IconUploadPlatformIO}
+    \end{figure}
     \item Tunggu hingga proses upload berhasil.
-    \item Jika LED menyala, lanjut ke eksperimen selanjutnya.
-    \item Jika tidak, ulangi proses upload
+    \item Tekan tombol reset satu kali untuk menjalankan program yang telah di upload.
+    \item Selanjutnya adalah uji fungsional, caranya tekan tombol boot dengan variasi sebagai berikut:
+    \subitem - tekan sekali, lalu cek warna rgb nya.
+    \subitem - tekan sekali lagi, lalu cek warna rgb nya.
+    \subitem - tekan tahan, lalu cek warna rgb nya.
+    \subitem - tekan dua kali, lalu cek warna rgb nya.
+    \subitem - tekan tiga kali, lalu cek warna rgb nya.
+    \item Tulislah analisisnya pada laporan serta cocokkan dengan kode pada main.cpp untuk mendukung analisis tersebut.
     \item Dokumentasikan hasil.
 \end{enumerate}
-
-% \section{Eksperimen 4: Pengujian Program Kelompok}
-% \begin{enumerate}
-%     \item Siapkan program yang akan diuji.
-    
-%     \item Masukkan program pada tugas pendahuluan ke dalam template yang sudah disediakan.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.4\linewidth]{P4/img/11_tampilan_ssid_ap_ketika_sudah_berhasil_diflash.png}
-%         \caption{Tampilan SSID AP}
-%         \label{fig:TampilanSSIDAP}
-%     \end{figure}
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.4\linewidth]{P4/img/12_tampilan_ota_siap_upload.png}
-%         \caption{Tampilan OTA}
-%         \label{fig:TampilanOTA}
-%     \end{figure}
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.4\linewidth]{P4/img/13_tampilan_ota_sukses_upload.png}
-%         \caption{Tampilan Sukses Upload}
-%         \label{fig:TampilaSuksesUpload}
-%     \end{figure}
-%     \item Upload program menggunakan PlatformIO dan Fitur OTA, pada gambar \ref{fig:TampilanSSIDAP}, \ref{fig:TampilanOTA}, dan \ref{fig:TampilaSuksesUpload}.
-%     \item Tes sesuai dengan klik tombol dan pastikan sesuai dengan hasil yang seharusnya.
-%     \item Dokumentasikan hasilnya.
-% \end{enumerate}
-
